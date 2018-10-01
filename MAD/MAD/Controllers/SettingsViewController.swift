@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         txtName.text = UserSettings.instance.name
-        sldCalories.value = UserSettings.instance.calories
+        sldCalories.value = UserSettings.instance.maxCalories
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,7 +27,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func Save_Click(_ sender: UIButton) {
         UserSettings.instance.name = txtName.text!
-        UserSettings.instance.calories = sldCalories.value
+        UserSettings.instance.maxCalories = sldCalories.value
     }
     
     @IBAction func sldCalories_ValueChanged(_ sender: UISlider) {

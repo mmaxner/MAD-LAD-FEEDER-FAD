@@ -12,7 +12,7 @@ public class UserSettings {
     
     public var name : String = "Michael Maxner"
     public var maxCalories : Int = 2500
-    private var calorieBreakdown: CalorieBreakdown = CalorieBreakdown()
+    private var calorieBreakdown: NutrionalFacts = NutrionalFacts()
     
     private var currentCalories: Int = 0
     
