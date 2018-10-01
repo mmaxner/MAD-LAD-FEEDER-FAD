@@ -19,6 +19,7 @@
 		3D20AA58216268D700D1DC63 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D20AA57216268D700D1DC63 /* Settings.storyboard */; };
 		3D20AA5C2162691400D1DC63 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA5B2162691400D1DC63 /* FoodListViewController.swift */; };
 		3D20AA5E2162692100D1DC63 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA5D2162692100D1DC63 /* SettingsViewController.swift */; };
+		3F6473EE21628B7700869957 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6473ED21628B7700869957 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3D20AA57216268D700D1DC63 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		3D20AA5B2162691400D1DC63 /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		3D20AA5D2162692100D1DC63 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3F6473ED21628B7700869957 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				3D20AA25216264F900D1DC63 /* AppDelegate.swift */,
 				3D20AA2C216264F900D1DC63 /* Assets.xcassets */,
 				3D20AA31216264F900D1DC63 /* Info.plist */,
+				3F6473ED21628B7700869957 /* Settings.swift */,
 			);
 			path = MAD;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6473EE21628B7700869957 /* Settings.swift in Sources */,
 				3D20AA28216264F900D1DC63 /* MainViewController.swift in Sources */,
 				3D20AA26216264F900D1DC63 /* AppDelegate.swift in Sources */,
 				3D20AA5C2162691400D1DC63 /* FoodListViewController.swift in Sources */,

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,13 +17,71 @@
                     <view key="view" contentMode="scaleToFill" id="5RM-hs-xNs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFk-YK-eCP">
+                                <rect key="frame" x="16" y="139" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15000" minValue="1200" maxValue="20000" translatesAutoresizingMaskIntoConstraints="NO" id="YO0-8l-29p">
+                                <rect key="frame" x="14" y="236" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sldCalories_ValueChanged:" destination="x4i-lV-RJe" eventType="valueChanged" id="zqs-dJ-bCy"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezA-L0-CkK">
+                                <rect key="frame" x="16" y="110" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROq-Yw-9SR">
+                                <rect key="frame" x="16" y="207" width="71.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow1-l5-PgQ">
+                                <rect key="frame" x="95" y="207" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7D-Zz-rqi">
+                                <rect key="frame" x="325" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="Save_Click:" destination="x4i-lV-RJe" eventType="touchUpInside" id="XuY-B6-HvW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uFk-YK-eCP" firstAttribute="top" secondItem="ezA-L0-CkK" secondAttribute="bottom" constant="8" id="H1B-fy-wbf"/>
+                            <constraint firstItem="ow1-l5-PgQ" firstAttribute="leading" secondItem="ROq-Yw-9SR" secondAttribute="trailing" constant="8" id="Iwm-UX-14m"/>
+                            <constraint firstItem="YO0-8l-29p" firstAttribute="top" secondItem="ROq-Yw-9SR" secondAttribute="bottom" constant="8" id="RPi-iS-7QJ"/>
+                            <constraint firstItem="ow1-l5-PgQ" firstAttribute="top" secondItem="uFk-YK-eCP" secondAttribute="bottom" constant="38" id="UMa-oO-T2h"/>
+                            <constraint firstItem="ROq-Yw-9SR" firstAttribute="top" secondItem="uFk-YK-eCP" secondAttribute="bottom" constant="38" id="Y1g-QA-0gC"/>
+                            <constraint firstItem="YO0-8l-29p" firstAttribute="top" secondItem="ow1-l5-PgQ" secondAttribute="bottom" constant="8" id="Zp0-B6-mSv"/>
+                            <constraint firstItem="ezA-L0-CkK" firstAttribute="top" secondItem="TY9-Xb-e1W" secondAttribute="top" constant="90" id="g5b-fD-Jkl"/>
+                            <constraint firstItem="uFk-YK-eCP" firstAttribute="leading" secondItem="TY9-Xb-e1W" secondAttribute="leading" constant="16" id="mDo-Ot-5Sz"/>
+                            <constraint firstItem="ezA-L0-CkK" firstAttribute="leading" secondItem="TY9-Xb-e1W" secondAttribute="leading" constant="16" id="pAq-54-xrA"/>
+                            <constraint firstItem="ROq-Yw-9SR" firstAttribute="leading" secondItem="TY9-Xb-e1W" secondAttribute="leading" constant="16" id="xSv-4L-yR4"/>
+                            <constraint firstItem="TY9-Xb-e1W" firstAttribute="trailing" secondItem="uFk-YK-eCP" secondAttribute="trailing" constant="16" id="zbc-Hk-VyU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TY9-Xb-e1W"/>
                     </view>
+                    <connections>
+                        <outlet property="lblCalories" destination="ow1-l5-PgQ" id="kxM-EP-zMK"/>
+                        <outlet property="sldCalories" destination="YO0-8l-29p" id="713-oQ-1l3"/>
+                        <outlet property="txtName" destination="uFk-YK-eCP" id="nx7-na-R9a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJX-gL-ORE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="182"/>
+            <point key="canvasLocation" x="165.59999999999999" y="181.25937031484258"/>
         </scene>
     </scenes>
 </document>
