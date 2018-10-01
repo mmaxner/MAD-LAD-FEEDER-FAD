@@ -24,12 +24,37 @@
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmA-8v-ies" customClass="GradientView" customModule="MAD" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WSX-hb-shL">
-                                        <rect key="frame" x="36" y="258" width="150" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </progressView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBR-Iv-BIQ" customClass="CircleProgressBar" customModule="MAD">
+                                        <rect key="frame" x="62.5" y="130.5" width="250" height="250"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="Gxb-yr-M9D"/>
+                                            <constraint firstAttribute="height" constant="250" id="qUH-fA-Qdk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" red="1" green="0.40932952928895833" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Users Name&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-9U-j4X">
+                                        <rect key="frame" x="78" y="28" width="218" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="XBR-Iv-BIQ" firstAttribute="top" secondItem="Ztf-9U-j4X" secondAttribute="bottom" constant="71" id="1YS-6s-QIB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ztf-9U-j4X" secondAttribute="trailing" constant="79" id="2Rn-JD-7NT"/>
+                                    <constraint firstItem="Ztf-9U-j4X" firstAttribute="top" secondItem="lmA-8v-ies" secondAttribute="top" constant="28" id="DYQ-tq-Nrx"/>
+                                    <constraint firstItem="Ztf-9U-j4X" firstAttribute="leading" secondItem="lmA-8v-ies" secondAttribute="leading" constant="78" id="Nrb-qr-Enz"/>
+                                    <constraint firstItem="XBR-Iv-BIQ" firstAttribute="centerX" secondItem="lmA-8v-ies" secondAttribute="centerX" id="aha-bx-Ruv"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorOne">
                                         <color key="value" red="0.15503035093006881" green="0.42086373730964466" blue="0.3598363095458913" alpha="0.94860338184931503" colorSpace="custom" customColorSpace="sRGB"/>
@@ -58,6 +83,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="calorieProgress" destination="XBR-Iv-BIQ" id="9HA-7X-3qQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

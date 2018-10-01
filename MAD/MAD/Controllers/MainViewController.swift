@@ -10,9 +10,13 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var calorieProgress: CircleProgressBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        calorieProgress.progress = 0.8
         
     }
 
