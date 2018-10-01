@@ -10,14 +10,28 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var lblCalories: UILabel!
+    @IBOutlet weak var sldCalories: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        txtName.text = Settings.instance.name
+        sldCalories.value = Settings.instance.calories
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func Save_Click(_ sender: UIButton) {
+        Settings.instance.name = txtName.text!
+        Settings.instance.calories = sldCalories.value
+    }
+    
+    @IBAction func sldCalories_ValueChanged(_ sender: UISlider) {
+        lblCalories.text = sldCalories.description
     }
     
 }
