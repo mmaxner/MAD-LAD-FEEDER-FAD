@@ -21,8 +21,8 @@
 		3D20AA5E2162692100D1DC63 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA5D2162692100D1DC63 /* SettingsViewController.swift */; };
 		3D20AA6121628EEB00D1DC63 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA6021628EEB00D1DC63 /* CircleProgressBar.swift */; };
 		3D2F15412162B58C00B15DC3 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F15402162B58C00B15DC3 /* Food.swift */; };
-		3D2F15432162B5B600B15DC3 /* CalorieBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F15422162B5B600B15DC3 /* CalorieBreakdown.swift */; };
-		3F6473EE21628B7700869957 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6473ED21628B7700869957 /* Settings.swift */; };
+		3D2F15432162B5B600B15DC3 /* NutrionalFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F15422162B5B600B15DC3 /* NutrionalFacts.swift */; };
+		3F6473EE21628B7700869957 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6473ED21628B7700869957 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,8 @@
 		3D20AA5D2162692100D1DC63 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3D20AA6021628EEB00D1DC63 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		3D2F15402162B58C00B15DC3 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
-		3D2F15422162B5B600B15DC3 /* CalorieBreakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieBreakdown.swift; sourceTree = "<group>"; };
-		3F6473ED21628B7700869957 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		3D2F15422162B5B600B15DC3 /* NutrionalFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrionalFacts.swift; sourceTree = "<group>"; };
+		3F6473ED21628B7700869957 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,9 +177,9 @@
 		3D2F153F2162B57C00B15DC3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3F6473ED21628B7700869957 /* Settings.swift */,
+				3F6473ED21628B7700869957 /* UserSettings.swift */,
 				3D2F15402162B58C00B15DC3 /* Food.swift */,
-				3D2F15422162B5B600B15DC3 /* CalorieBreakdown.swift */,
+				3D2F15422162B5B600B15DC3 /* NutrionalFacts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,9 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D2F15432162B5B600B15DC3 /* CalorieBreakdown.swift in Sources */,
+				3D2F15432162B5B600B15DC3 /* NutrionalFacts.swift in Sources */,
 				3D20AA6121628EEB00D1DC63 /* CircleProgressBar.swift in Sources */,
-				3F6473EE21628B7700869957 /* Settings.swift in Sources */,
+				3F6473EE21628B7700869957 /* UserSettings.swift in Sources */,
 				3D20AA28216264F900D1DC63 /* MainViewController.swift in Sources */,
 				3D20AA26216264F900D1DC63 /* AppDelegate.swift in Sources */,
 				3D20AA5C2162691400D1DC63 /* FoodListViewController.swift in Sources */,

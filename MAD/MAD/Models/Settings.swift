@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Settings {
+public class UserSettings {
     
     public var name : String = "Michael Maxner"
     public var maxCalories : Int = 2500
@@ -16,15 +16,15 @@ public class Settings {
     
     private var currentCalories: Int = 0
     
-    public static let instance = Settings()
+    public static let instance = UserSettings()
     
     private init() {
     
     }
     
-    public func consumeFood(food: Food)
+    public func consume(food: Food)
     {
-        food.calories
+        calorieBreakdown += food.calorieBreakdown
     }
     
 }

@@ -9,13 +9,13 @@
 import Foundation
 
 public struct Food {
-    public var calorieBreakdown : CalorieBreakdown!
+    public var calorieBreakdown : NutrionalFacts!
     public var name : String!
     
     init(name: String, calories: Int, protein: Int, fat: Int, carbs: Int) {
         self.name = name
         
-        calorieBreakdown = CalorieBreakdown()
+        calorieBreakdown = NutrionalFacts()
         calorieBreakdown.totalCalories = calories
         calorieBreakdown.totalCarbs = carbs
         calorieBreakdown.totalFat = fat
