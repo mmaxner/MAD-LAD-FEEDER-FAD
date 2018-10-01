@@ -24,12 +24,37 @@
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmA-8v-ies" customClass="GradientView" customModule="MAD" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WSX-hb-shL">
-                                        <rect key="frame" x="36" y="258" width="150" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mario Mario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-9U-j4X">
+                                        <rect key="frame" x="30" y="28" width="315" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBB-xU-AtP" customClass="CircleProgressBar" customModule="MAD" customModuleProvider="target">
+                                        <rect key="frame" x="62.5" y="139.5" width="250" height="250"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="R2L-x3-QBG"/>
+                                            <constraint firstAttribute="height" constant="250" id="oHT-a9-5Gh"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" red="1" green="0.40932952929999999" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ztf-9U-j4X" secondAttribute="trailing" constant="30" id="2Rn-JD-7NT"/>
+                                    <constraint firstItem="Ztf-9U-j4X" firstAttribute="top" secondItem="lmA-8v-ies" secondAttribute="top" constant="28" id="DYQ-tq-Nrx"/>
+                                    <constraint firstItem="Ztf-9U-j4X" firstAttribute="leading" secondItem="lmA-8v-ies" secondAttribute="leading" constant="30" id="Nrb-qr-Enz"/>
+                                    <constraint firstItem="JBB-xU-AtP" firstAttribute="centerX" secondItem="Ztf-9U-j4X" secondAttribute="centerX" id="V7P-jf-6BH"/>
+                                    <constraint firstItem="JBB-xU-AtP" firstAttribute="top" secondItem="Ztf-9U-j4X" secondAttribute="bottom" constant="80" id="dWp-H3-Ml6"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorOne">
                                         <color key="value" red="0.15503035093006881" green="0.42086373730964466" blue="0.3598363095458913" alpha="0.94860338184931503" colorSpace="custom" customColorSpace="sRGB"/>
@@ -58,6 +83,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="calorieProgress" destination="JBB-xU-AtP" id="cFS-vA-DGE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
