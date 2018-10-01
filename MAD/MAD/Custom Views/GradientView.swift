@@ -31,6 +31,11 @@ public class GradientView : UIView {
         updateLayer()
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        updateLayer()
+    }
+    
     private func updateLayer() {
         if let gradientLayer = self.layer as? CAGradientLayer,
             let colorOne = colorOne, let colorTwo = colorTwo {

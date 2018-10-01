@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class CircleProgressBar: UIView {
+class CircleProgressBar: UIView {
 
     private var progressLayer = CAShapeLayer()
     public var progress: CGFloat {
@@ -65,6 +65,10 @@ public class CircleProgressBar: UIView {
         progressLayer.lineWidth = 10.0;
         progressLayer.strokeEnd = 0.0
         layer.addSublayer(progressLayer)
+    }
+    
+    public override func prepareForInterfaceBuilder() {
+        createProgressBar()
     }
     
 }
