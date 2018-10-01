@@ -18,11 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peetz" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-GU-AX8">
-                                <rect key="frame" x="-144" y="0.0" width="852" height="667"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="852" id="TLF-lN-0xw"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awwwwyeahman" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-GU-AX8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmA-8v-ies" customClass="GradientView" customModule="MAD" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -45,9 +42,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pXi-GU-AX8" secondAttribute="trailing" id="BLh-St-Wj1"/>
                             <constraint firstItem="lmA-8v-ies" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kjs-tk-Kz4"/>
                             <constraint firstItem="lmA-8v-ies" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W6K-tO-zzV"/>
-                            <constraint firstItem="pXi-GU-AX8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-144" id="aot-X5-jt1"/>
+                            <constraint firstItem="pXi-GU-AX8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X5e-jS-P6R"/>
                             <constraint firstItem="lmA-8v-ies" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="guB-b7-ZNo"/>
                             <constraint firstItem="pXi-GU-AX8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sji-9a-ddt"/>
                             <constraint firstItem="pXi-GU-AX8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vCr-Lz-6xw"/>
@@ -67,6 +65,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="peetz" width="1880" height="1253"/>
+        <image name="awwwwyeahman" width="1080" height="1350"/>
     </resources>
 </document>
