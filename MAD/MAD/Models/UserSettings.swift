@@ -10,9 +10,9 @@ import Foundation
 
 public class UserSettings {
     
-    public var name : String = "Michael Maxner"
+    public var name : String = "Michael Macsner"
     public var maxCalories : Int = 2500
-    private var calorieBreakdown: NutrionalFacts = NutrionalFacts()
+    private var calorieBreakdown: NutritionalFacts = NutritionalFacts()
     
     private var currentCalories: Int = 0
     

@@ -8,13 +8,13 @@
 
 import Foundation
 
-public struct NutrionalFacts {
+public struct NutritionalFacts {
     var totalCalories: Int = 0
     var totalProtein: Int = 0
     var totalCarbs: Int = 0
     var totalFat: Int = 0
     
-    static func +=(lhs: inout NutrionalFacts, rhs: NutrionalFacts)
+    static func +=(lhs: inout NutritionalFacts, rhs: NutritionalFacts)
     {
         lhs.totalCalories += rhs.totalCalories
         lhs.totalCarbs += rhs.totalCarbs
