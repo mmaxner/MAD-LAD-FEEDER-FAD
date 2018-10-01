@@ -8,15 +8,13 @@
 
 import Foundation
 
+// Singleton class used to manage track the users calories and info
 public class UserSettings {
     
+    public static let instance = UserSettings()
     public var name : String = "Michael Maxner"
     public var maxCalories : Int = 2500
-    private var calorieBreakdown: NutrionalFacts = NutrionalFacts()
-    
-    private var currentCalories: Int = 0
-    
-    public static let instance = UserSettings()
+    public private(set) var calorieBreakdown: NutrionalFacts = NutrionalFacts()
     
     private init() {
     

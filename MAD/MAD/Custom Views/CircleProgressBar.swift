@@ -10,7 +10,9 @@ import UIKit
 
 @IBDesignable
 class CircleProgressBar: UIView {
-
+    private var calorieLbl: UILabel!
+    
+    /// MARK - Progress Bar fields
     private var progressLayer = CAShapeLayer()
     public var progress: CGFloat {
         set {
@@ -23,29 +25,36 @@ class CircleProgressBar: UIView {
     @IBInspectable public var progressColor: UIColor! {
         didSet {
             progressLayer.strokeColor = progressColor.cgColor
-            createProgressBar()
+            createView()
         }
     }
     
+    /// MARK - Track Bar fields
     private var tracklayer = CAShapeLayer()
     @IBInspectable public var trackColor: UIColor! {
         didSet {
             tracklayer.strokeColor = trackColor.cgColor
-            createProgressBar()
+            createView()
         }
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        createProgressBar()
+        createView()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        createProgressBar()
+        createView()
     }
     
-    func createProgressBar() {
+    private func createView() {
+        createProgressBar()
+        createCalorieLabel()
+    }
+    
+    //https://www.iostutorialjunction.com/2018/05/how-to-create-circular-progress-view-swift-tutorial.html
+    private func createProgressBar() {
         backgroundColor = UIColor.clear
         self.layer.cornerRadius = self.frame.size.width/2.0
         let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0),
@@ -67,8 +76,25 @@ class CircleProgressBar: UIView {
         layer.addSublayer(progressLayer)
     }
     
+    private func createCalorieLabel() {
+        let calorieLbl = UILabel()
+        calorieLbl.frame = CGRect(x: 0, y: 0, width: 250, height: 200)
+        calorieLbl.center.x = frame.minX + frame.width / 4
+        calorieLbl.center.y = frame.minY - 30
+        calorieLbl.font = calorieLbl.font.withSize(40.0)
+        calorieLbl.textColor = UIColor.white
+        calorieLbl.textAlignment = .center
+        addSubview(calorieLbl)
+        
+        self.calorieLbl = calorieLbl
+    }
+    
     public override func prepareForInterfaceBuilder() {
-        createProgressBar()
+        createView()
+    }
+    
+    public func set(calories: Int) {
+        calorieLbl.text = "\(calories) cal."
     }
     
 }

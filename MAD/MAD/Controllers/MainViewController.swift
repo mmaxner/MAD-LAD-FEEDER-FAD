@@ -15,9 +15,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        calorieProgress.progress = 0.8
-        
+        let calories = UserSettings.instance.calorieBreakdown.totalCalories
+        calorieProgress.progress = CGFloat(calories / UserSettings.instance.maxCalories)
+        calorieProgress.set(calories: calories)
     }
 
     override func didReceiveMemoryWarning() {
