@@ -10,19 +10,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MAD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peetz" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-GU-AX8">
+                                <rect key="frame" x="-144" y="0.0" width="852" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="852" id="TLF-lN-0xw"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmA-8v-ies" customClass="GradientView" customModule="MAD" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WSX-hb-shL">
+                                        <rect key="frame" x="36" y="258" width="150" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorOne">
+                                        <color key="value" red="0.15503035093006881" green="0.42086373730964466" blue="0.3598363095458913" alpha="0.94860338184931503" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTwo">
+                                        <color key="value" red="0.24838733323812007" green="0.39514224630284717" blue="0.59862785532030449" alpha="0.94780072773287682" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lmA-8v-ies" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kjs-tk-Kz4"/>
+                            <constraint firstItem="lmA-8v-ies" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W6K-tO-zzV"/>
+                            <constraint firstItem="pXi-GU-AX8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-144" id="aot-X5-jt1"/>
+                            <constraint firstItem="lmA-8v-ies" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="guB-b7-ZNo"/>
+                            <constraint firstItem="pXi-GU-AX8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sji-9a-ddt"/>
+                            <constraint firstItem="pXi-GU-AX8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vCr-Lz-6xw"/>
+                            <constraint firstItem="lmA-8v-ies" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wik-tr-yY0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="solidColor">
+                                <color key="value" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="87.706146926536732"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="peetz" width="1880" height="1253"/>
+    </resources>
 </document>

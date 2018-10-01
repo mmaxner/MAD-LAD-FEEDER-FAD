@@ -10,18 +10,36 @@ import UIKit
 
 @IBDesignable
 public class GradientView : UIView {
-    @IBInspectable public var solidColor: UIColor!
-//    @IBInspectable public var colorTwo: UIColor!
+    @IBInspectable public var colorOne: UIColor! {
+        didSet {
+            updateLayer()
+        }
+    }
+    @IBInspectable public var colorTwo: UIColor! {
+        didSet {
+            updateLayer()
+        }
+    }
+    
+    override open class var layerClass: AnyClass {
+        return CAGradientLayer.classForCoder()
+    }
+    
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        if let gradientLayer = self.layer as? CAGradientLayer
-        {
-            gradientLayer.colors = [
-                solidColor.cgColor,
-                UIColor.init(white: 1, alpha: 0).cgColor
-            ]
+        updateLayer()
+    }
+    
+    private func updateLayer() {
+        if let gradientLayer = self.layer as? CAGradientLayer,
+            let colorOne = colorOne, let colorTwo = colorTwo {
+            gradientLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
         }
         backgroundColor = UIColor.clear
+    }
+    
+    override public func prepareForInterfaceBuilder() {
+        updateLayer()
     }
 }
