@@ -8,20 +8,25 @@
 
 import UIKit
 
-@IBDesignable
-class CalorieProgressBar: UIView {
-    private var calorieLbl: UILabel!
+@IBDesignable class CalorieProgressBar: UIView {
+    
+    private var percentageTxt: String!
+    private var calorieTxt: String!
+    private var displayCalorie: Bool = true
+    
+    // The calorie label for the Progress Bar
+    public private(set) var calorieLbl: UILabel!
+    
+    @IBInspectable public var strokeWidth: CGFloat = 0.0 {
+        didSet {
+            createView()
+        }
+    }
     
     /// MARK - Progress Bar fields
     private var progressLayer = CAShapeLayer()
-    public var progress: CGFloat {
-        set {
-            progressLayer.strokeEnd = newValue
-        }
-        get {
-            return progressLayer.strokeEnd
-        }
-    }
+
+    // IBInspectable for the color of the Progress Bar
     @IBInspectable public var progressColor: UIColor! {
         didSet {
             progressLayer.strokeColor = progressColor.cgColor
@@ -29,31 +34,40 @@ class CalorieProgressBar: UIView {
         }
     }
     
+    @IBInspectable public var lowProgressColor: UIColor!
+    @IBInspectable public var mediumProgressColor: UIColor!
+    @IBInspectable public var highProgressColor: UIColor!
+    
     /// MARK - Track Bar fields
-    private var tracklayer = CAShapeLayer()
+    private var trackLayer = CAShapeLayer()
+    // IBInspectable for the color of the Progress Bar background
     @IBInspectable public var trackColor: UIColor! {
         didSet {
-            tracklayer.strokeColor = trackColor.cgColor
+            trackLayer.strokeColor = trackColor.cgColor
             createView()
         }
     }
 
+    // Required constructor for Storyboard
     override init(frame: CGRect) {
         super.init(frame: frame)
         createView()
     }
     
+    // Required constructor for Storyboard
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         createView()
     }
     
+    // Method to call all other set up methods
     private func createView() {
         createProgressBar()
         createCalorieLabel()
     }
     
-    //https://www.iostutorialjunction.com/2018/05/how-to-create-circular-progress-view-swift-tutorial.html
+    // Creates the Circular Progress Bar
+    // Source for code here: https://www.iostutorialjunction.com/2018/05/how-to-create-circular-progress-view-swift-tutorial.html
     private func createProgressBar() {
         backgroundColor = UIColor.clear
         self.layer.cornerRadius = self.frame.size.width/2.0
@@ -61,21 +75,23 @@ class CalorieProgressBar: UIView {
                                       radius: (frame.size.width - 1.5)/2, startAngle: CGFloat(-0.5 * Double.pi),
                                       endAngle: CGFloat(1.5 * Double.pi), clockwise: true)
         
-        tracklayer.path = circlePath.cgPath
-        tracklayer.fillColor = UIColor.clear.cgColor
-        tracklayer.strokeColor = trackColor?.cgColor
-        tracklayer.lineWidth = 10.0;
-        tracklayer.strokeEnd = 1.0
-        layer.addSublayer(tracklayer)
-        
+        // Set the circle path as the path for the track, also setting the colors, width, and adding it as a sub layer
+        trackLayer.path = circlePath.cgPath
+        trackLayer.fillColor = UIColor.clear.cgColor
+        trackLayer.strokeColor = trackColor?.cgColor
+        trackLayer.lineWidth = strokeWidth
+        trackLayer.strokeEnd = 1.0
+        layer.addSublayer(trackLayer)
+        // Set the circle path as the path for the progress bar, also setting the colors, width, and adding it as a sub layer
         progressLayer.path = circlePath.cgPath
         progressLayer.fillColor = UIColor.clear.cgColor
-        progressLayer.strokeColor = progressColor?.cgColor
-        progressLayer.lineWidth = 10.0;
+        progressLayer.strokeColor = lowProgressColor?.cgColor
+        progressLayer.lineWidth = strokeWidth
         progressLayer.strokeEnd = 0.0
         layer.addSublayer(progressLayer)
     }
     
+    // Method to create the calorie label dynamically and center it
     private func createCalorieLabel() {
         let calorieLbl = UILabel()
         calorieLbl.frame = CGRect(x: 0, y: 0, width: 250, height: 200)
@@ -87,14 +103,47 @@ class CalorieProgressBar: UIView {
         addSubview(calorieLbl)
         
         self.calorieLbl = calorieLbl
+        // Add tap gesture recognizer to switch between displays
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleCalorieDisplay)))
     }
     
+    // Method used for displaying the look of the Custom View in the Storyboard
     public override func prepareForInterfaceBuilder() {
         createView()
     }
     
-    public func set(calories: Int) {
-        calorieLbl.text = "\(calories) cal."
+    public func setProgress(calories: Int, maxCalories: Int) {
+        let percentage = CGFloat(calories) / CGFloat(maxCalories)
+        progressLayer.strokeEnd = percentage
+        
+        // Set medium color, only between the percentages of 40% to 75%
+        if (percentage > 0.4 && percentage < 0.75) {
+            let colorPercentage = percentage / 0.75
+            progressLayer.strokeColor = mediumProgressColor.createInbetween(of: highProgressColor, by: colorPercentage).cgColor
+        }
+        // Set high color, when above 75%
+        else if (percentage >= 0.75) {
+            progressLayer.strokeColor = highProgressColor.cgColor
+        }
+        // Otherwise, set progress bar to low progress color
+        else {
+            let colorPercentage = percentage / 0.4
+            progressLayer.strokeColor = lowProgressColor.createInbetween(of: mediumProgressColor, by: colorPercentage).cgColor
+        }
+        
+        calorieTxt = "\(calories) cal."
+        percentageTxt = "\(Int(percentage * 100))%"
+        
+        calorieLbl.text = calorieTxt
+    }
+    
+    @objc public func toggleCalorieDisplay() {
+        displayCalorie = !displayCalorie
+        let displayText = displayCalorie ? calorieTxt : percentageTxt
+        
+        if let text = displayText {
+            calorieLbl.fadeTo(text: text, for: CGFloat(Constants.FadeInTime * 2))
+        }
     }
     
 }

@@ -89,14 +89,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mario Mario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-9U-j4X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mike" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-9U-j4X">
                                 <rect key="frame" x="30" y="50" width="315" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBB-xU-AtP" customClass="CalorieProgressBar" customModule="MAD" customModuleProvider="target">
-                                <rect key="frame" x="62" y="131.5" width="250" height="250"/>
+                                <rect key="frame" x="62" y="131" width="250" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="R2L-x3-QBG"/>
@@ -104,10 +104,22 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" red="1" green="0.40932952929999999" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="1" green="0.40932952929999999" blue="0.59999999999999998" alpha="0.9474796660958904" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.79615261130136983" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lowProgressColor">
+                                        <color key="value" red="1" green="0.40932952929999999" blue="0.59999999999999998" alpha="0.9474796660958904" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="mediumProgressColor">
+                                        <color key="value" red="1" green="0.81036338007145992" blue="0.1795941310562994" alpha="0.9474796660958904" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highProgressColor">
+                                        <color key="value" red="0.54011124235477381" green="1" blue="0.20624333988688337" alpha="0.9474796660958904" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -142,6 +154,8 @@
                         <outlet property="calorieProgress" destination="JBB-xU-AtP" id="cFS-vA-DGE"/>
                         <outlet property="carbsLbl" destination="2gO-rF-onc" id="F5f-L0-dXs"/>
                         <outlet property="fatLbl" destination="h2y-7S-I9C" id="3VI-Tf-Are"/>
+                        <outlet property="macroStackView" destination="ks5-oC-hEj" id="tz1-YX-DeP"/>
+                        <outlet property="nameLbl" destination="Ztf-9U-j4X" id="QAC-P2-ZNv"/>
                         <outlet property="proteinLbl" destination="a3Z-cf-xim" id="vml-Sw-x2H"/>
                     </connections>
                 </viewController>
