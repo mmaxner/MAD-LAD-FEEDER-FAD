@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class CircleProgressBar: UIView {
+class CalorieProgressBar: UIView {
     private var calorieLbl: UILabel!
     
     /// MARK - Progress Bar fields

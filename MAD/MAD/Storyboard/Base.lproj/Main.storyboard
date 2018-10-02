@@ -95,7 +95,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBB-xU-AtP" customClass="CircleProgressBar" customModule="MAD" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBB-xU-AtP" customClass="CalorieProgressBar" customModule="MAD" customModuleProvider="target">
                                 <rect key="frame" x="62" y="131.5" width="250" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -140,6 +140,9 @@
                     </view>
                     <connections>
                         <outlet property="calorieProgress" destination="JBB-xU-AtP" id="cFS-vA-DGE"/>
+                        <outlet property="carbsLbl" destination="2gO-rF-onc" id="F5f-L0-dXs"/>
+                        <outlet property="fatLbl" destination="h2y-7S-I9C" id="3VI-Tf-Are"/>
+                        <outlet property="proteinLbl" destination="a3Z-cf-xim" id="vml-Sw-x2H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

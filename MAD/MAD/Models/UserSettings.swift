@@ -14,7 +14,7 @@ public class UserSettings {
     public static let instance = UserSettings()
     public var name : String = "Michael Macsner"
     public var maxCalories : Int = 2500
-    public private(set) var calorieBreakdown: NutrionalFacts = NutrionalFacts()
+    public private(set) var calorieBreakdown: NutritionalFacts = NutritionalFacts()
     
     private init() {
     
