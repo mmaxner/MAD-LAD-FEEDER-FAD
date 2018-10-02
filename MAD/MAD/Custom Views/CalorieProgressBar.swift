@@ -23,22 +23,15 @@ import UIKit
         }
     }
     
-    /// MARK - Progress Bar fields
+    // MARK: - Progress Bar fields
     private var progressLayer = CAShapeLayer()
 
-    // IBInspectable for the color of the Progress Bar
-    @IBInspectable public var progressColor: UIColor! {
-        didSet {
-            progressLayer.strokeColor = progressColor.cgColor
-            createView()
-        }
-    }
-    
+    // IBInspectable for the colors of the Progress Bar
     @IBInspectable public var lowProgressColor: UIColor!
     @IBInspectable public var mediumProgressColor: UIColor!
     @IBInspectable public var highProgressColor: UIColor!
     
-    /// MARK - Track Bar fields
+    // MARK: - Track Bar fields
     private var trackLayer = CAShapeLayer()
     // IBInspectable for the color of the Progress Bar background
     @IBInspectable public var trackColor: UIColor! {
@@ -125,6 +118,10 @@ import UIKit
         else if (percentage >= 0.75) {
             progressLayer.strokeColor = highProgressColor.cgColor
         }
+        // Set the color to low to indicate something bad, if the user eats too many calories
+        else if (percentage > 1.0) {
+            progressLayer.strokeColor = lowProgressColor.cgColor
+        }
         // Otherwise, set progress bar to low progress color
         else {
             let colorPercentage = percentage / 0.4
@@ -137,6 +134,7 @@ import UIKit
         calorieLbl.text = calorieTxt
     }
     
+    // Toggles the display between the calorie amount and the percentage of daily calories met
     @objc public func toggleCalorieDisplay() {
         displayCalorie = !displayCalorie
         let displayText = displayCalorie ? calorieTxt : percentageTxt
@@ -145,5 +143,4 @@ import UIKit
             calorieLbl.fadeTo(text: text, for: CGFloat(Constants.FadeInTime * 2))
         }
     }
-    
 }

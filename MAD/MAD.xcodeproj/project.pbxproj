@@ -26,6 +26,7 @@
 		3DCC1AB22162EFB60092C53A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AB12162EFB60092C53A /* Constants.swift */; };
 		3DCC1AB521639DC60092C53A /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AB421639DC60092C53A /* UIColor+Ext.swift */; };
 		3DCC1AB721639E4F0092C53A /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AB621639E4F0092C53A /* UILabel+Ext.swift */; };
+		3DCC1AB92163B33D0092C53A /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AB82163B33D0092C53A /* UIButton+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		3DCC1AB12162EFB60092C53A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3DCC1AB421639DC60092C53A /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		3DCC1AB621639E4F0092C53A /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		3DCC1AB82163B33D0092C53A /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			children = (
 				3DCC1AB421639DC60092C53A /* UIColor+Ext.swift */,
 				3DCC1AB621639E4F0092C53A /* UILabel+Ext.swift */,
+				3DCC1AB82163B33D0092C53A /* UIButton+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				3DCC1AB22162EFB60092C53A /* Constants.swift in Sources */,
 				3D20AA5E2162692100D1DC63 /* SettingsViewController.swift in Sources */,
 				3D20AA542162669900D1DC63 /* GradientView.swift in Sources */,
+				3DCC1AB92163B33D0092C53A /* UIButton+Ext.swift in Sources */,
 				3D7F50302162B9930074E9F0 /* UserSettings.swift in Sources */,
 				3DCC1AB721639E4F0092C53A /* UILabel+Ext.swift in Sources */,
 				3D7F502F2162B9930074E9F0 /* NutritionalFacts.swift in Sources */,
