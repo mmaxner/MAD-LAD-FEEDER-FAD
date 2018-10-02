@@ -18,20 +18,21 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         txtName.text = UserSettings.instance.name
         sldCalories.value = Float(UserSettings.instance.maxCalories)
+        lblCalories.text = "\(UserSettings.instance.maxCalories)"
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func Save_Click(_ sender: UIButton) {
+    @IBAction func onSaveClicked(_ sender: UIButton) {
         UserSettings.instance.name = txtName.text!
         UserSettings.instance.maxCalories = Int(sldCalories.value)
+        performSegue(withIdentifier: "unwindToMainSegue", sender: sender)
     }
     
     @IBAction func sldCalories_ValueChanged(_ sender: UISlider) {
-        lblCalories.text = sldCalories.description
+        lblCalories.text = "\(Int(sldCalories.value))"
+    }
+    
+    @IBAction func onBackClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindToMainSegue", sender: sender)
     }
     
 }

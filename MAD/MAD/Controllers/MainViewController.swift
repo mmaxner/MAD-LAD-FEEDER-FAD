@@ -23,6 +23,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var forkButton: UIButton!
     @IBOutlet weak var gearButton: UIButton!
     
+    private var flashChangeName = true
+    
     override func loadView() {
         super.loadView()
         nameLbl.alpha = 0.0
@@ -45,7 +47,13 @@ class MainViewController: UIViewController {
             self.nameLbl.alpha = 1.0
             self.calorieProgress.calorieLbl.alpha = 1.0
         }, completion: { finished in
-            self.nameLbl.fadeTo(text: UserSettings.instance.name, for: CGFloat(Constants.FadeInTime * 2))
+            if (self.flashChangeName) {
+                self.nameLbl.fadeTo(text: UserSettings.instance.name, for: CGFloat(Constants.FadeInTime * 2))
+            }
+            else {
+                self.nameLbl.text = UserSettings.instance.name
+                self.flashChangeName = true
+            }
         })
     }
     
@@ -72,6 +80,11 @@ class MainViewController: UIViewController {
     // IBAction for clicking the gearButton. Sends the user to the settings view
     @IBAction func onSettingsClicked(_ sender: UIButton) {
         performSegue(withIdentifier: "settingsSegue", sender: sender)
+    }
+    
+    // Does not need an outlet actually connected but needs to exist for unwinding segues
+    @IBAction func unwindToMainViewController(segue:UIStoryboardSegue) {
+        self.flashChangeName = false
     }
 }
 

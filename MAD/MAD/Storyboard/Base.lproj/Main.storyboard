@@ -13,7 +13,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MAD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="MAD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +188,7 @@
                         <outlet property="nameLbl" destination="Ztf-9U-j4X" id="QAC-P2-ZNv"/>
                         <outlet property="proteinLbl" destination="a3Z-cf-xim" id="vml-Sw-x2H"/>
                         <segue destination="Gop-Nf-3Q2" kind="show" identifier="foodListSegue" id="vMZ-kj-ogF"/>
-                        <segue destination="3K2-rn-rhY" kind="show" identifier="settingsSegue" id="rGN-Xo-0Qv"/>
+                        <segue destination="3K2-rn-rhY" kind="presentation" identifier="settingsSegue" id="rGN-Xo-0Qv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -198,8 +198,8 @@
         <!--SettingsViewController-->
         <scene sceneID="Rhv-YG-Iq3">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsViewController" id="3K2-rn-rhY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZy-iu-uoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsViewController" id="3K2-rn-rhY" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="-132" y="540"/>
         </scene>

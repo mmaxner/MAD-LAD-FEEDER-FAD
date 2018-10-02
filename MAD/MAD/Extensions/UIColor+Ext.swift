@@ -12,14 +12,14 @@ extension UIColor {
     public func createInbetween(of otherColor: UIColor, by percentage: CGFloat) -> UIColor {
         
         // Calculate the inbetween values for each but only increment at a percentage of the value
-        let red = graduallyCloseDifference(between: self.red, and: otherColor.red, by: percentage)
-        let blue = graduallyCloseDifference(between: self.blue, and: otherColor.blue, by: percentage)
-        let green = graduallyCloseDifference(between: self.green, and: otherColor.green, by: percentage)
+        let red = closeDifference(between: self.red, and: otherColor.red, by: percentage)
+        let blue = closeDifference(between: self.blue, and: otherColor.blue, by: percentage)
+        let green = closeDifference(between: self.green, and: otherColor.green, by: percentage)
         
         return UIColor(red: red, green: green, blue: blue, alpha: cgColor.alpha)
     }
     
-    private func graduallyCloseDifference(between valueOne: CGFloat, and valueTwo:CGFloat, by percentage: CGFloat) -> CGFloat {
+    private func closeDifference(between valueOne: CGFloat, and valueTwo:CGFloat, by percentage: CGFloat) -> CGFloat {
         var newValue = valueOne
         let difference = valueTwo - valueOne
         newValue += (difference * CGFloat(percentage))
