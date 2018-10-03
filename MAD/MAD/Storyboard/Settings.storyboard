@@ -13,7 +13,7 @@
         <!--MainViewController-->
         <scene sceneID="FnP-xa-GFm">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainViewController" id="hvM-cB-wVv" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MainViewController" storyboardName="Main" referencedIdentifier="MainViewController" id="hvM-cB-wVv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9n-ia-hBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sUs-Sh-R0C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>

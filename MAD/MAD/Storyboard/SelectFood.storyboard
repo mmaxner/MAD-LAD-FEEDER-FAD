@@ -108,11 +108,11 @@
         <!--MainViewController-->
         <scene sceneID="1vK-vm-2mR">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainViewController" id="0si-dV-qUx" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MainViewController" storyboardName="Main" referencedIdentifier="MainViewController" id="0si-dV-qUx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ST9-Sy-Y0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="3oM-HH-uaa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-812" y="120"/>
+            <point key="canvasLocation" x="-813" y="157"/>
         </scene>
     </scenes>
 </document>
