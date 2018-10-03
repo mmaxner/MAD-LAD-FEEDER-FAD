@@ -8,8 +8,10 @@
 
 import UIKit
 
+// Extensions for UILabel
 extension UILabel {
     
+    // Method used for easily animating the label fading away, and fading back in with new text
     public func fadeTo(text: String, for duration: CGFloat) {
         // Fade away and set text on completion
         UIView.animate(withDuration: TimeInterval(duration/2), delay: 0.5, options: [.curveEaseInOut], animations: {

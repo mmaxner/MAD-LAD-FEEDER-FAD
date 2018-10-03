@@ -23,6 +23,12 @@ public class FoodContainerViewController : UIViewController {
     }
     
     @IBAction func onEatClicked(_ sender: UIButton) {
+        // Unwrap selectedFoods list in if let statment, and then consume all the food
+        if let foodEaten = childTable.selectedFoods {
+            for i in 0..<foodEaten.count {
+                UserSettings.instance.consume(food: foodEaten[i])
+            }
+        }
         performSegue(withIdentifier: "unwindToMainSegue", sender: sender)
     }
     

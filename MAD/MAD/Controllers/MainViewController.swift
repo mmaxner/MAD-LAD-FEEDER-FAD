@@ -30,17 +30,18 @@ class MainViewController: UIViewController {
         nameLbl.alpha = 0.0
         macroStackView.alpha = 0.0
         calorieProgress.calorieLbl.alpha = 0.0
-        
-        // Load the user's calories, macros, and name
-        loadProgressBar()
-        loadMacroValues()
+        // Set name to welcome when first loading the app
         nameLbl.text = "Welcome"
-        
+        // Set the tint on the two buttons to white
         forkButton.applyTintToImage(tint: UIColor.white)
         gearButton.applyTintToImage(tint: UIColor.white)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        // Load the user's calories and macros
+        loadProgressBar()
+        loadMacroValues()
+        
         // Fade in the text
         UIView.animate(withDuration: Constants.FadeInTime, animations: {
             self.macroStackView.alpha = 1.0

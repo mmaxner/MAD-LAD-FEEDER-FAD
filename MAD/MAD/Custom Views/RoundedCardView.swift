@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable public class RoundedCardView: UIView {
-    
+    // The radius of the corners on the view
     @IBInspectable public var cornerRadius: CGFloat = 2.0 {
         didSet {
             roundCorners()

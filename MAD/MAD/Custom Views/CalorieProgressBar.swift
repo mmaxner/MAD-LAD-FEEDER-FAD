@@ -89,7 +89,7 @@ import UIKit
         let calorieLbl = UILabel()
         calorieLbl.frame = CGRect(x: 0, y: 0, width: 250, height: 200)
         calorieLbl.center.x = frame.minX + frame.width / 4
-        calorieLbl.center.y = frame.minY - 30
+        calorieLbl.center.y = frame.minY - 15
         calorieLbl.font = calorieLbl.font.withSize(40.0)
         calorieLbl.textColor = UIColor.white
         calorieLbl.textAlignment = .center
@@ -109,13 +109,13 @@ import UIKit
         let percentage = CGFloat(calories) / CGFloat(maxCalories)
         progressLayer.strokeEnd = percentage
         
-        // Set medium color, only between the percentages of 40% to 75%
-        if (percentage > 0.4 && percentage < 0.75) {
-            let colorPercentage = percentage / 0.75
+        // Set medium color, only between the percentages of 40% to 85%
+        if (percentage > 0.4 && percentage < 0.85) {
+            let colorPercentage = percentage / 0.85
             progressLayer.strokeColor = mediumProgressColor.createInbetween(of: highProgressColor, by: colorPercentage).cgColor
         }
-        // Set high color, when above 75%
-        else if (percentage >= 0.75) {
+        // Set high color, when above 85%
+        else if (percentage >= 0.85) {
             progressLayer.strokeColor = highProgressColor.cgColor
         }
         // Set the color to low to indicate something bad, if the user eats too many calories
@@ -127,7 +127,7 @@ import UIKit
             let colorPercentage = percentage / 0.4
             progressLayer.strokeColor = lowProgressColor.createInbetween(of: mediumProgressColor, by: colorPercentage).cgColor
         }
-        
+        // Set different display texts
         calorieTxt = "\(calories) cal."
         percentageTxt = "\(Int(percentage * 100))%"
         

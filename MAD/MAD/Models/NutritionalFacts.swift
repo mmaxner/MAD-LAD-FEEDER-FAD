@@ -8,14 +8,15 @@
 
 import Foundation
 
+// Struct used for storing Calories, Carbs, Protein, and Fat values
 public struct NutritionalFacts {
     var totalCalories: Int = 0
     var totalProtein: Int = 0
     var totalCarbs: Int = 0
     var totalFat: Int = 0
     
-    static func +=(lhs: inout NutritionalFacts, rhs: NutritionalFacts)
-    {
+    // Custom add operator, adds the values of the two structs together
+    static func +=(lhs: inout NutritionalFacts, rhs: NutritionalFacts) {
         lhs.totalCalories += rhs.totalCalories
         lhs.totalCarbs += rhs.totalCarbs
         lhs.totalFat += rhs.totalFat

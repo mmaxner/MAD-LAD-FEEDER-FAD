@@ -19,7 +19,6 @@ public class FoodCardCell : UITableViewCell {
     @IBOutlet weak var foodImg: UIImageView!
     @IBOutlet weak var cardView: UIView!
     
-    
     public var food: Food? {
         didSet {
             // Assign values from food to labels, after unwrapping food value
@@ -32,17 +31,19 @@ public class FoodCardCell : UITableViewCell {
                 calorieValueLbl.text = "\(food.calorieBreakdown.totalCalories)"
                 carbValueLbl.text = "\(food.calorieBreakdown.totalCarbs)g"
                 proteinValueLbl.text = "\(food.calorieBreakdown.totalProtein)g"
-                fatValueLbl.text = "\(food.calorieBreakdown.totalCarbs)g"
+                fatValueLbl.text = "\(food.calorieBreakdown.totalFat)g"
                 
                 setupView()
             }
         }
     }
     
+    // Public var for whether the cell is 'blue'.
+    // Variables like 'selected' 'isSelected' 'highlighted' and 'isHighlighted' are all taken and changed by internal workings of a cell.
     public var isBlue: Bool = false {
         didSet {
             if (isBlue) {
-                cardView?.backgroundColor = UIColor(red: 230/255, green: 235/255, blue: 255/255, alpha: 1.0)
+                cardView?.backgroundColor = UIColor(red: 220/255, green: 235/255, blue: 255/255, alpha: 1.0)
             }
             else {
                 cardView?.backgroundColor = UIColor.white
@@ -60,6 +61,7 @@ public class FoodCardCell : UITableViewCell {
         setupView()
     }
     
+    // Method to set up the round corners of the food image
     private func setupView() {
         foodImg?.layer.cornerRadius = 10.0
         foodImg?.clipsToBounds = true

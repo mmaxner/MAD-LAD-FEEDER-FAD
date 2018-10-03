@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Class for storing the information on different food
 public class Food {
     public var calorieBreakdown : NutritionalFacts!
     public var name : String!

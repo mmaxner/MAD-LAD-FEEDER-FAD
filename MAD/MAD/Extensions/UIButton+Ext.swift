@@ -8,8 +8,10 @@
 
 import UIKit
 
+// Extensions for UIButton
 extension UIButton {
     
+    // Method for taking a buttons image view and adding a tint to it
     public func applyTintToImage(tint: UIColor) {
         let image = imageView?.image?.withRenderingMode(.alwaysTemplate)
         setImage(image, for: .normal)
