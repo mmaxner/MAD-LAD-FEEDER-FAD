@@ -2,18 +2,21 @@
 //  Food.swift
 //  MAD
 //
-//  Created by 🅱️onnor 🅱️enry on 2018-10-01.
-//  Copyright © 2018 🅱️onner 🅱️enry. All rights reserved.
+//  Created by Conner Henry on 2018-10-01.
+//  Copyright © 2018 Conner Henry. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-public struct Food {
+public class Food {
     public var calorieBreakdown : NutritionalFacts!
     public var name : String!
+    public var image: UIImage?
+    public var isSelected: Bool = false
     
-    init(name: String, calories: Int, protein: Int, fat: Int, carbs: Int) {
+    init(name: String, image: UIImage?, calories: Int, protein: Int, fat: Int, carbs: Int) {
         self.name = name
+        self.image = image
         
         calorieBreakdown = NutritionalFacts()
         calorieBreakdown.totalCalories = calories
