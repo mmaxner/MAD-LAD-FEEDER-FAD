@@ -31,7 +31,8 @@ class MainViewController: UIViewController {
         macroStackView.alpha = 0.0
         calorieProgress.calorieLbl.alpha = 0.0
         // Set name to welcome when first loading the app
-        nameLbl.text = "Welcome"
+        
+//        nameLbl.text = "Welcome"
         // Set the tint on the two buttons to white
         forkButton.applyTintToImage(tint: UIColor.white)
         gearButton.applyTintToImage(tint: UIColor.white)

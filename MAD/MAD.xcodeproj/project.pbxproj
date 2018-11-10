@@ -31,6 +31,7 @@
 		3DCC1AC42163D7F40092C53A /* FoodCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DCC1AC32163D7F40092C53A /* FoodCardView.xib */; };
 		3DCC1AC62163D8A70092C53A /* RoundedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AC52163D8A70092C53A /* RoundedCardView.swift */; };
 		3DCC1AC82163EF3B0092C53A /* FoodContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AC72163EF3B0092C53A /* FoodContainerViewController.swift */; };
+		3FBB6988219753CC0080BFB8 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		3DCC1AC32163D7F40092C53A /* FoodCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCardView.xib; sourceTree = "<group>"; };
 		3DCC1AC52163D8A70092C53A /* RoundedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCardView.swift; sourceTree = "<group>"; };
 		3DCC1AC72163EF3B0092C53A /* FoodContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodContainerViewController.swift; sourceTree = "<group>"; };
+		3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				3D20AA532162669900D1DC63 /* GradientView.swift */,
 				3D20AA6021628EEB00D1DC63 /* CalorieProgressBar.swift */,
 				3DCC1AC52163D8A70092C53A /* RoundedCardView.swift */,
+				3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				3DCC1AB22162EFB60092C53A /* Constants.swift in Sources */,
 				3D20AA5E2162692100D1DC63 /* SettingsViewController.swift in Sources */,
 				3D20AA542162669900D1DC63 /* GradientView.swift in Sources */,
+				3FBB6988219753CC0080BFB8 /* CustomNavigationBar.swift in Sources */,
 				3DCC1AB92163B33D0092C53A /* UIButton+Ext.swift in Sources */,
 				3D7F50302162B9930074E9F0 /* UserSettings.swift in Sources */,
 				3DCC1AB721639E4F0092C53A /* UILabel+Ext.swift in Sources */,
