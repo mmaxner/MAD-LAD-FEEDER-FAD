@@ -17,6 +17,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nKa-GT-hbn" customClass="CustomNavigationBar" customModule="MAD" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OtX-f5-q0T"/>
@@ -24,30 +27,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C23-1g-inu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1202" y="114"/>
+            <point key="canvasLocation" x="-724" y="88"/>
         </scene>
-        <!--Main View Controller-->
+        <!--MainController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="MAD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" title="MainController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="MAD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmA-8v-ies" customClass="GradientView" customModule="MAD" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorOne">
-                                        <color key="value" red="0.15503035093006881" green="0.42086373730964466" blue="0.3598363095458913" alpha="0.94860338184931503" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.2483873332" green="0.3951422463" blue="0.59862785529999996" alpha="0.94780072770000001" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorTwo">
-                                        <color key="value" red="0.24838733323812007" green="0.39514224630284717" blue="0.59862785532030449" alpha="0.94780072773287682" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.51816304980000005" green="0.66679540699999995" blue="0.72644109599999995" alpha="0.94860338180000003" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ks5-oC-hEj">
-                                <rect key="frame" x="20" y="437.5" width="335" height="109.5"/>
+                                <rect key="frame" x="20" y="393.5" width="335" height="109.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-a9-roC">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="26.5"/>
@@ -102,14 +105,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mike" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-9U-j4X">
-                                <rect key="frame" x="47" y="94" width="281" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBB-xU-AtP" customClass="CalorieProgressBar" customModule="MAD" customModuleProvider="target">
-                                <rect key="frame" x="62" y="175" width="250" height="250"/>
+                                <rect key="frame" x="62" y="94" width="250" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="R2L-x3-QBG"/>
@@ -117,7 +114,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="0.79615261130136983" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
                                         <real key="value" value="10"/>
@@ -133,46 +130,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ini-M8-5aA">
-                                <rect key="frame" x="333" y="94" width="32" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="U6S-FF-gPW"/>
-                                    <constraint firstAttribute="width" constant="32" id="sGo-kr-gVL"/>
-                                </constraints>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="fork"/>
-                                <connections>
-                                    <action selector="onForkClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C8e-lH-0GX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyS-sL-jEa">
-                                <rect key="frame" x="10" y="94" width="32" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="NvK-8h-W8v"/>
-                                    <constraint firstAttribute="width" constant="32" id="wcL-Pa-mrL"/>
-                                </constraints>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="gear"/>
-                                <connections>
-                                    <action selector="onSettingsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JTq-up-KuI"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyo-l1-EZg">
+                                <rect key="frame" x="164" y="29" width="46.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IyS-sL-jEa" firstAttribute="top" secondItem="Ztf-9U-j4X" secondAttribute="top" id="8la-Q1-YkL"/>
+                            <constraint firstItem="JBB-xU-AtP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1AW-f8-o9M"/>
+                            <constraint firstItem="vyo-l1-EZg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-35" id="FK1-hS-IE5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ks5-oC-hEj" secondAttribute="bottom" constant="120" id="Guh-1h-vqq"/>
+                            <constraint firstItem="vyo-l1-EZg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JnN-0A-clc"/>
                             <constraint firstItem="lmA-8v-ies" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kjs-tk-Kz4"/>
-                            <constraint firstItem="Ztf-9U-j4X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="P0v-PN-HaQ"/>
                             <constraint firstItem="ks5-oC-hEj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PiC-Hs-9Gc"/>
-                            <constraint firstItem="Ztf-9U-j4X" firstAttribute="leading" secondItem="IyS-sL-jEa" secondAttribute="trailing" constant="5" id="Rxa-oj-41F"/>
-                            <constraint firstAttribute="trailing" secondItem="Ini-M8-5aA" secondAttribute="trailing" constant="10" id="T9v-Br-Qtr"/>
                             <constraint firstItem="lmA-8v-ies" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W6K-tO-zzV"/>
-                            <constraint firstItem="IyS-sL-jEa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="XQT-ky-UZ2"/>
-                            <constraint firstItem="Ini-M8-5aA" firstAttribute="top" secondItem="Ztf-9U-j4X" secondAttribute="top" id="Zfv-yr-Rht"/>
-                            <constraint firstItem="Ini-M8-5aA" firstAttribute="leading" secondItem="Ztf-9U-j4X" secondAttribute="trailing" constant="5" id="ayf-Gu-AaI"/>
                             <constraint firstItem="lmA-8v-ies" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="guB-b7-ZNo"/>
-                            <constraint firstItem="JBB-xU-AtP" firstAttribute="top" secondItem="Ztf-9U-j4X" secondAttribute="bottom" constant="50" id="piC-5r-K2T"/>
                             <constraint firstItem="JBB-xU-AtP" firstAttribute="centerX" secondItem="lmA-8v-ies" secondAttribute="centerX" id="uSU-KL-Qrp"/>
                             <constraint firstItem="lmA-8v-ies" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wik-tr-yY0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ks5-oC-hEj" secondAttribute="trailing" constant="20" id="zjJ-6z-HXS"/>
@@ -184,18 +158,35 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="5yV-xD-df9"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5yV-xD-df9">
+                        <barButtonItem key="leftBarButtonItem" title="Gear" id="QFb-kI-c42" customClass="CustomBarButton" customModule="MAD" customModuleProvider="target">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="gear"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onSettingsClicked:" destination="BYZ-38-t0r" id="tmB-4s-Nz8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Fork" id="kzk-2R-r9s" customClass="CustomBarButton" customModule="MAD" customModuleProvider="target">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="fork"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onForkClicked:" destination="BYZ-38-t0r" id="lJi-8J-cR4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calorieProgress" destination="JBB-xU-AtP" id="cFS-vA-DGE"/>
                         <outlet property="carbsLbl" destination="2gO-rF-onc" id="F5f-L0-dXs"/>
                         <outlet property="fatLbl" destination="h2y-7S-I9C" id="3VI-Tf-Are"/>
-                        <outlet property="forkButton" destination="Ini-M8-5aA" id="14o-WD-23R"/>
-                        <outlet property="gearButton" destination="IyS-sL-jEa" id="dug-ia-4oJ"/>
                         <outlet property="macroStackView" destination="ks5-oC-hEj" id="tz1-YX-DeP"/>
-                        <outlet property="nameLbl" destination="Ztf-9U-j4X" id="QAC-P2-ZNv"/>
+                        <outlet property="nameLbl" destination="vyo-l1-EZg" id="eS4-nI-Je6"/>
                         <outlet property="proteinLbl" destination="a3Z-cf-xim" id="vml-Sw-x2H"/>
-                        <segue destination="Gop-Nf-3Q2" kind="show" identifier="foodListSegue" id="vMZ-kj-ogF"/>
-                        <segue destination="3K2-rn-rhY" kind="presentation" identifier="settingsSegue" id="rGN-Xo-0Qv"/>
+                        <segue destination="3K2-rn-rhY" kind="show" identifier="settingsSegue" id="rGN-Xo-0Qv"/>
+                        <segue destination="yQG-YG-9lI" kind="show" identifier="foodListSegue" id="Qsi-yB-rZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -208,15 +199,78 @@
                 <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsViewController" id="3K2-rn-rhY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZy-iu-uoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="540"/>
+            <point key="canvasLocation" x="97" y="554"/>
         </scene>
         <!--FoodContainerViewController-->
-        <scene sceneID="ZmL-48-7qu">
+        <scene sceneID="ShI-G7-B1R">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SelectFood" storyboardName="SelectFood" referencedIdentifier="FoodContainerViewController" id="Gop-Nf-3Q2" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gzx-Oc-lDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="FoodContainerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yQG-YG-9lI" userLabel="FoodContainerViewController" customClass="FoodContainerViewController" customModule="MAD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5d5-GU-uac">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4t-Ef-SON" customClass="GradientView" customModule="MAD" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorOne">
+                                        <color key="value" red="0.2483873332" green="0.3951422463" blue="0.59862785529999996" alpha="0.94780072770000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTwo">
+                                        <color key="value" red="0.51816304980000005" green="0.66679540699999995" blue="0.72644109599999995" alpha="0.94860338180000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGU-Wd-L11">
+                                <rect key="frame" x="0.0" y="121" width="375" height="502"/>
+                                <connections>
+                                    <segue destination="meb-6I-yGo" kind="embed" id="f6u-gi-wlE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R4t-Ef-SON" firstAttribute="bottom" secondItem="SqS-ly-1tj" secondAttribute="bottom" id="8J2-UN-1MX"/>
+                            <constraint firstItem="sGU-Wd-L11" firstAttribute="top" secondItem="SqS-ly-1tj" secondAttribute="top" constant="57" id="Eyi-S1-lKe"/>
+                            <constraint firstItem="R4t-Ef-SON" firstAttribute="leading" secondItem="SqS-ly-1tj" secondAttribute="leading" id="JXK-4m-L0c"/>
+                            <constraint firstItem="R4t-Ef-SON" firstAttribute="top" secondItem="5d5-GU-uac" secondAttribute="top" id="PXT-Y5-Hsr"/>
+                            <constraint firstItem="sGU-Wd-L11" firstAttribute="leading" secondItem="SqS-ly-1tj" secondAttribute="leading" id="Vd7-tX-hMy"/>
+                            <constraint firstItem="R4t-Ef-SON" firstAttribute="trailing" secondItem="SqS-ly-1tj" secondAttribute="trailing" id="bIg-f5-DN1"/>
+                            <constraint firstItem="sGU-Wd-L11" firstAttribute="bottom" secondItem="SqS-ly-1tj" secondAttribute="bottom" id="f3P-uF-AX0"/>
+                            <constraint firstItem="sGU-Wd-L11" firstAttribute="trailing" secondItem="SqS-ly-1tj" secondAttribute="trailing" id="r7D-Vc-9A0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SqS-ly-1tj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Food List" id="ohj-gn-DYd">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="CZV-jz-akl"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="jyc-Rh-bMC" kind="unwind" unwindAction="unwindToMainViewControllerWithSegue:" id="MdB-cu-OeH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgS-Ut-3ym" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jyc-Rh-bMC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="304" y="540"/>
+            <point key="canvasLocation" x="950" y="88"/>
+        </scene>
+        <!--Food Select View-->
+        <scene sceneID="P87-dh-5OW">
+            <objects>
+                <tableViewController storyboardIdentifier="FoodSelectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="meb-6I-yGo" userLabel="Food Select View" customClass="FoodListViewController" customModule="MAD" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="450" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="9rG-tQ-Qhl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.30150671369999998" green="1" blue="0.64025498889999999" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="meb-6I-yGo" id="iXc-2y-fMj"/>
+                            <outlet property="delegate" destination="meb-6I-yGo" id="s0A-CW-YWA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgH-mn-hdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="87"/>
         </scene>
     </scenes>
     <resources>

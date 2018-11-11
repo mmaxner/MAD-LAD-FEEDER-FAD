@@ -11,18 +11,17 @@ import UIKit
 class MainViewController: UIViewController {
     // Custom CircleProgressBar for the daily calorie amount
     @IBOutlet weak var calorieProgress: CalorieProgressBar!
-    // MARK: User's name
-    @IBOutlet weak var nameLbl: UILabel!
+    // MARK: Nav Bar
+
     // MARK: Macro level UILabels
     @IBOutlet weak var carbsLbl: UILabel!
     @IBOutlet weak var proteinLbl: UILabel!
     @IBOutlet weak var fatLbl: UILabel!
     
+    @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var macroStackView: UIStackView!
-    // MARK: Buttons
-    @IBOutlet weak var forkButton: UIButton!
-    @IBOutlet weak var gearButton: UIButton!
-    
+
+    private var navBar: CustomNavigationBar!
     private var flashChangeName = true
     
     override func loadView() {
@@ -30,12 +29,10 @@ class MainViewController: UIViewController {
         nameLbl.alpha = 0.0
         macroStackView.alpha = 0.0
         calorieProgress.calorieLbl.alpha = 0.0
-        // Set name to welcome when first loading the app
         
-//        nameLbl.text = "Welcome"
-        // Set the tint on the two buttons to white
-        forkButton.applyTintToImage(tint: UIColor.white)
-        gearButton.applyTintToImage(tint: UIColor.white)
+        // Set name to welcome when first loading the app
+        nameLbl.alpha = 0.0
+        nameLbl.text = "Welcome"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,6 +43,7 @@ class MainViewController: UIViewController {
         // Fade in the text
         UIView.animate(withDuration: Constants.FadeInTime, animations: {
             self.macroStackView.alpha = 1.0
+
             self.nameLbl.alpha = 1.0
             self.calorieProgress.calorieLbl.alpha = 1.0
         }, completion: { finished in
@@ -75,12 +73,12 @@ class MainViewController: UIViewController {
     // MARK: - IBActions for Controls
     
     // IBAction for clicking the forkButton. Sends the user to the food list view
-    @IBAction func onForkClicked(_ sender: UIButton) {
+    @IBAction func onForkClicked(_ sender: Any) {
         performSegue(withIdentifier: "foodListSegue", sender: sender)
     }
     
     // IBAction for clicking the gearButton. Sends the user to the settings view
-    @IBAction func onSettingsClicked(_ sender: UIButton) {
+    @IBAction func onSettingsClicked(_ sender: Any) {
         performSegue(withIdentifier: "settingsSegue", sender: sender)
     }
     

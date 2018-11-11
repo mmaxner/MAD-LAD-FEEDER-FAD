@@ -12,6 +12,7 @@ public class FoodContainerViewController : UIViewController {
     
     @IBOutlet weak var eatButton: UIButton!
     private var childTable : FoodListViewController!
+    private var navBar: CustomNavigationBar!
     
     public override func viewDidAppear(_ animated: Bool) {
         toggleEatButton(on: false)

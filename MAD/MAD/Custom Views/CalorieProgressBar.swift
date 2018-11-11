@@ -89,7 +89,7 @@ import UIKit
         let calorieLbl = UILabel()
         calorieLbl.frame = CGRect(x: 0, y: 0, width: 250, height: 200)
         calorieLbl.center.x = frame.minX + frame.width / 4
-        calorieLbl.center.y = frame.minY - 15
+        calorieLbl.center.y = frame.minY + 25
         calorieLbl.font = calorieLbl.font.withSize(40.0)
         calorieLbl.textColor = UIColor.white
         calorieLbl.textAlignment = .center
