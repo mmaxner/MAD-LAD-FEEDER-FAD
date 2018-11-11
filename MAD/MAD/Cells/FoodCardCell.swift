@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class FoodCardCell : UITableViewCell {
+public class FoodCardCell : UICollectionViewCell {
     
     @IBOutlet weak var foodNameLbl: UILabel!
     
@@ -51,8 +51,8 @@ public class FoodCardCell : UITableViewCell {
         }
     }
     
-    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
         setupView()
     }
     
@@ -63,6 +63,7 @@ public class FoodCardCell : UITableViewCell {
     
     // Method to set up the round corners of the food image
     private func setupView() {
+        self.backgroundColor = UIColor.clear
         foodImg?.layer.cornerRadius = 10.0
         foodImg?.clipsToBounds = true
     }

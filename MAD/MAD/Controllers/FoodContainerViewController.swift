@@ -17,10 +17,10 @@ public class FoodContainerViewController : UIViewController {
     public override func viewDidAppear(_ animated: Bool) {
         toggleEatButton(on: false)
         // Get the child view of the Embeded View, which should be our table
-        if let embededView = childViewControllers[0] as? FoodListViewController {
-            childTable = embededView
-            childTable.setToggleEatButton(method: {on in self.toggleEatButton(on: on) })
-        }
+//        if let embededView = childViewControllers[0] as? FoodListViewController {
+//            childTable = embededView
+//            childTable.setToggleEatButton(method: {on in self.toggleEatButton(on: on) })
+//        }
     }
     
     @IBAction func onEatClicked(_ sender: UIButton) {

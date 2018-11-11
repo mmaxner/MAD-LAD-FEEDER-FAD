@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodListViewController: UITableViewController  {
+class FoodListViewController: UICollectionViewController  {
     private var toggleEatButton: ((Bool) -> ())?
     public private(set) var selectedFoods: [Food]!
     // Set the sections of Food available, which is a list of names (String) and an array of Foods
@@ -34,7 +34,9 @@ class FoodListViewController: UITableViewController  {
     
     override func loadView() {
         super.loadView()
-        tableView.register(UINib(nibName: "FoodCardView", bundle: nil), forCellReuseIdentifier: "FoodCardView")
+        collectionView?.register(UINib(nibName: "FoodCardView", bundle: nil), forCellWithReuseIdentifier: "FoodCardView")
+        collectionView?.allowsMultipleSelection = true
+        
         selectedFoods = [Food]()
     }
     
@@ -42,54 +44,83 @@ class FoodListViewController: UITableViewController  {
         toggleEatButton = method
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section <= foodDictionary.count ? foodDictionary[section].name : nil
-    }
     
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if let header = view as? UITableViewHeaderFooterView {
-            header.textLabel?.textColor = UIColor.white
-            header.textLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
-        }
-    }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return section <= foodDictionary.count ? foodDictionary[section].name : nil
+//    }
+//
+//    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        if let header = view as? UITableViewHeaderFooterView {
+//            header.textLabel?.textColor = UIColor.white
+//            header.textLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
+//        }
+//    }
+    
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return foodDictionary.count
+//    }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return foodDictionary.count
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return section <= foodDictionary.count ? foodDictionary[section].list.count : 0
     }
     
-    // Binds FoodCardCells to the food items in the list
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCardView", for: indexPath) as? FoodCardCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodCardView", for: indexPath) as? FoodCardCell {
             cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
             cell.food = foodDictionary[indexPath.section].list[indexPath.row]
             
             return cell
         }
         else {
-            return UITableViewCell()
+            return UICollectionViewCell()
         }
     }
     
+    // Binds FoodCardCells to the food items in the list
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCardView", for: indexPath) as? FoodCardCell {
+//            cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+//            cell.food = foodDictionary[indexPath.section].list[indexPath.row]
+//
+//            return cell
+//        }
+//        else {
+//            return UITableViewCell()
+//        }
+//    }
+    
     // Method for selecting Cell in table, adds it to selectFoods list
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? FoodCardCell {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? FoodCardCell {
             cell.isBlue = true
             foodDictionary[indexPath.section].list[indexPath.row].isSelected = true
             if let food = cell.food {
                 selectedFoods.append(food)
                 toggleEatButton?(true)
             }
-            
         }
     }
     
-    // Method for deselecting Cell in table
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? FoodCardCell {
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let cell = tableView.cellForRow(at: indexPath) as? FoodCardCell {
+//            cell.isBlue = true
+//            foodDictionary[indexPath.section].list[indexPath.row].isSelected = true
+//            if let food = cell.food {
+//                selectedFoods.append(food)
+//                toggleEatButton?(true)
+//            }
+//
+//        }
+//    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? FoodCardCell {
             
             // Set the cell to be not selected, store the selected value within the food list as well
             cell.isBlue = false
@@ -108,4 +139,26 @@ class FoodListViewController: UITableViewController  {
             
         }
     }
+    
+    // Method for deselecting Cell in table
+//    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        if let cell = tableView.cellForRow(at: indexPath) as? FoodCardCell {
+//
+//            // Set the cell to be not selected, store the selected value within the food list as well
+//            cell.isBlue = false
+//            foodDictionary[indexPath.section].list[indexPath.row].isSelected = false
+//
+//            // Find the index of the food by the name
+//            let foodIndex = selectedFoods.index(where: { cell.food?.name == $0.name })
+//            // Only remove at index if index is not nil
+//            if (foodIndex != nil) {
+//                selectedFoods.remove(at: foodIndex!)
+//            }
+//
+//            if (selectedFoods.count == 0) {
+//                toggleEatButton?(false)
+//            }
+//
+//        }
+//    }
 }
