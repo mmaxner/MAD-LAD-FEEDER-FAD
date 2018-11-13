@@ -22,72 +22,72 @@ public class UserSettings {
     // Default food list
     public var foodList: [Food] = [
         Food(
-            name: "Banana",
+            name: NSLocalizedString("Banana", comment: ""),
             image: #imageLiteral(resourceName: "Banana"),
-            description: "Bananas have long been exploited by humans all the way back from 1800s, when French explorer Alexandre 'Anana found the first Banana.",
+            description: NSLocalizedString("Bananas have long been exploited by humans all the way back from 1800s, when French explorer Alexandre 'Anana found the first Banana.", comment: ""),
             calories: 50,
             protein: 0,
             fat: 2,
             carbs: 13
         ),
         Food(
-            name: "Orange",
+            name: NSLocalizedString("Orange", comment: ""),
             image: #imageLiteral(resourceName: "Oranges"),
-            description: "Named after the colour, tastes like it too!",
+            description: NSLocalizedString("Named after the colour, tastes like it too!", comment: ""),
             calories: 70,
             protein: 12,
             fat: 3,
             carbs: 15
         ),
         Food(
-            name: "Apple",
+            name: NSLocalizedString("Apple", comment: ""),
             image: #imageLiteral(resourceName: "Apple"),
-            description: "Apples were first discovered by Newton, when he got hit by one.",
+            description: NSLocalizedString("Apples were first discovered by Newton, when he got hit by one.", comment: ""),
             calories: 20,
             protein: 1,
             fat: 0,
             carbs: 12
         ),
         Food(
-            name: "Cucumber",
+            name: NSLocalizedString("Cucumber", comment: ""),
             image: #imageLiteral(resourceName: "Cucumber"),
-            description: "The younger cousin of the Pickle, Cucumbers were discovered in Spain when Pickles were grown in soil that lacked 'pickle juice'.",
+            description: NSLocalizedString("The younger cousin of the Pickle, Cucumbers were discovered in Spain when Pickles were grown in soil that lacked 'pickle juice'.", comment: ""),
             calories: 5,
             protein: 0,
             fat: 0,
             carbs: 2
         ),
         Food(
-            name: "Carrot",
+            name: NSLocalizedString("Carrot", comment: ""),
             image: #imageLiteral(resourceName: "Carrots"),
-            description: "Good for your eyes, bad for the Germans.",
+            description: NSLocalizedString("Good for your eyes, bad for the Germans.", comment: ""),
             calories: 30,
             protein: 12,
             fat: 1000,
             carbs: 5
         ),
         Food(
-            name: "Peas",
+            name: NSLocalizedString("Peas", comment: ""),
             image: #imageLiteral(resourceName: "Peas"),
-            description: "Similar to a lentil, Peas are the worst vegetable taste wise, but very good nutrition wise.",
+            description: NSLocalizedString("Similar to a lentil, Peas are the worst vegetable taste wise, but very good nutrition wise.", comment: ""),
             calories: 6,
             protein: 2,
             fat: 0,
             carbs: 4
         ),
         Food(
-            name: "Almonds",
+            name: NSLocalizedString("Almonds", comment: ""),
             image: #imageLiteral(resourceName: "Almonds"),
-            description: "The only milkable memeber of the Nut family, Almonds are said to be closer to mammals then legumes.",
+            description: NSLocalizedString("The only milkable memeber of the Nut family, Almonds are said to be closer to mammals then legumes.", comment: ""),
             calories: 250,
             protein: 50,
             fat: 0,
             carbs: 2
         ),
         Food(
-            name: "Cashews",
+            name: NSLocalizedString("Cashews", comment: ""),
             image: #imageLiteral(resourceName: "Cashew"),
-            description: "Famous south american nuts, Cashews are named after there Chewy consistency.",
+            description: NSLocalizedString("Famous south american nuts, Cashews are named after there Chewy consistency.", comment: ""),
             calories: 400,
             protein: 12,
             fat: 15,

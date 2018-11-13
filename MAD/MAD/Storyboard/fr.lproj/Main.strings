@@ -27,7 +27,7 @@
 "BYZ-38-t0r.title" = "MainController";
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "CZV-jz-akl"; */
-"CZV-jz-akl.title" = "Retour";
+"cIu-2g-qPe.title" = "Retour";
 
 /* Class = "UILabel"; text = " kCal"; ObjectID = "D9S-wd-fW9"; */
 "D9S-wd-fW9.text" = " kCal";
@@ -36,7 +36,7 @@
 "G5e-7M-uX1.text" = " g";
 
 /* Class = "UIBarButtonItem"; title = "Select"; ObjectID = "L8f-VB-qHs"; */
-"L8f-VB-qHs.title" = "Sélectionner";
+"L8f-VB-qHs.title" = "Sélectionnez";
 
 /* Class = "UILabel"; text = "Carbs:"; ObjectID = "Li3-dc-9L3"; */
 "Li3-dc-9L3.text" = "Glucides:";
@@ -84,7 +84,7 @@
 "fSM-i4-JKw.text" = "Les calories: ";
 
 /* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "fyC-wW-nNC"; */
-"fyC-wW-nNC.title" = "Edit";
+"fyC-wW-nNC.title" = "Modifier";
 
 /* Class = "UILabel"; text = "Selected Items"; ObjectID = "g5l-Bf-tTp"; */
 "g5l-Bf-tTp.text" = "Articles sélectionnés";
