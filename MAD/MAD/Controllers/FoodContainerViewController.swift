@@ -13,7 +13,8 @@ public class FoodContainerViewController : UIViewController {
     private var navBar: CustomNavigationBar!
     @IBOutlet weak var eatBtn: UIBarButtonItem!
     @IBOutlet weak var selectBtn: UIBarButtonItem!
-    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectItemsStk: UIStackView!
     @IBOutlet weak var selectedItemsLbl: UILabel!
     
@@ -41,10 +42,9 @@ public class FoodContainerViewController : UIViewController {
     
     public override func viewDidLoad() {
         toggleEatButton(on: false)
-        collectionView?.delegate = self
-        collectionView?.dataSource = self
-        
-        collectionView?.register(UINib(nibName: "FoodCardView", bundle: nil), forCellWithReuseIdentifier: "FoodCardView")
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        tableView.register(UINib(nibName: "FoodCardView", bundle: nil), forCellReuseIdentifier: "FoodCardView")
         
         selectItemsStk.alpha = 0.0
         selectedFoods = [Food]()
@@ -53,7 +53,7 @@ public class FoodContainerViewController : UIViewController {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         foodDictionary = UserSettings.instance.foodList
-        collectionView?.reloadData()
+        tableView.reloadData()
     }
     
     @IBAction func onEatClicked(_ sender: Any) {
@@ -86,7 +86,7 @@ public class FoodContainerViewController : UIViewController {
             clearSelection()
         }
         
-        collectionView?.allowsMultipleSelection = isSelecting
+        tableView?.allowsMultipleSelection = isSelecting
     }
     
     private func toggleEatButton(on: Bool) {
@@ -114,20 +114,19 @@ public class FoodContainerViewController : UIViewController {
     }
 }
 
-extension FoodContainerViewController: UICollectionViewDelegate {
+extension FoodContainerViewController: UITableViewDelegate {
     
     // Deselect all food cards if cancelling selection
     public func clearSelection() {
         for index in 0 ..< selectedFoods.count {
             let indexPath = IndexPath(row: index, section: 0)
-            collectionView(collectionView!, didDeselectItemAt: indexPath)
+            tableView(tableView!, didDeselectRowAt: indexPath)
         }
         selectedFoods.removeAll()
     }
     
-    // Method for deselecting Cell in table
-    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? FoodCardCell {
+    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? FoodCardCell {
             
             // Set the cell to be not selected, store the selected value within the food list as well
             cell.isBlue = false
@@ -148,8 +147,8 @@ extension FoodContainerViewController: UICollectionViewDelegate {
     }
     
     // Method for selecting Cell in table, adds it to selectFoods list
-    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? FoodCardCell {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? FoodCardCell {
             // If selecting, highlight card as blue and start counting it
             if isSelecting {
                 cell.isBlue = true
@@ -159,7 +158,7 @@ extension FoodContainerViewController: UICollectionViewDelegate {
                     toggleEatButton(on: true)
                 }
             }
-            // Otherwise take the user to the detail view
+                // Otherwise take the user to the detail view
             else {
                 performSegue(withIdentifier: "foodDetailSegue", sender: cell.food)
             }
@@ -167,14 +166,14 @@ extension FoodContainerViewController: UICollectionViewDelegate {
     }
 }
 
-extension  FoodContainerViewController : UICollectionViewDataSource {
+extension  FoodContainerViewController : UITableViewDataSource {
     
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodDictionary.count
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodCardView", for: indexPath) as? FoodCardCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCardView", for: indexPath) as? FoodCardCell {
             cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
             cell.food = foodDictionary[indexPath.row]
             // Make sure cell is highlighted when recreating it
@@ -183,8 +182,7 @@ extension  FoodContainerViewController : UICollectionViewDataSource {
             return cell
         }
         else {
-            return UICollectionViewCell()
+            return UITableViewCell()
         }
     }
-    
 }

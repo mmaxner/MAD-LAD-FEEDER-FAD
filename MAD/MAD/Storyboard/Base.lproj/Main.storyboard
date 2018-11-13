@@ -206,29 +206,6 @@
                             <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4t-Ef-SON" customClass="GradientView" customModule="MAD" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yys-jx-8Jp">
-                                        <rect key="frame" x="0.0" y="209" width="375" height="322"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="322" id="bWG-jd-do9"/>
-                                        </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aCh-l3-hcx">
-                                            <size key="itemSize" width="300" height="321"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kuG-BA-cEg">
-                                                <rect key="frame" x="0.0" y="0.5" width="300" height="321"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="321"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qxe-1Z-2M7">
                                         <rect key="frame" x="109" y="82" width="158.5" height="87"/>
                                         <subviews>
@@ -263,18 +240,25 @@
                                         </items>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </toolbar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="321" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p6z-4G-qFj">
+                                        <rect key="frame" x="0.0" y="188" width="374" height="381"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.011773767609999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="0.011773767609999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="p6z-4G-qFj" firstAttribute="top" secondItem="X6Z-RB-rYr" secondAttribute="bottom" constant="19" id="0Jl-sO-azz"/>
                                     <constraint firstItem="oI8-fS-uRG" firstAttribute="leading" secondItem="R4t-Ef-SON" secondAttribute="leading" id="3Tt-Hk-Xeb"/>
                                     <constraint firstItem="qxe-1Z-2M7" firstAttribute="top" secondItem="R4t-Ef-SON" secondAttribute="top" constant="82" id="4JS-fD-sFj"/>
-                                    <constraint firstItem="yys-jx-8Jp" firstAttribute="leading" secondItem="R4t-Ef-SON" secondAttribute="leading" id="79R-j2-6rT"/>
+                                    <constraint firstItem="oI8-fS-uRG" firstAttribute="top" secondItem="p6z-4G-qFj" secondAttribute="bottom" constant="10" id="5t4-El-rxF"/>
                                     <constraint firstItem="qxe-1Z-2M7" firstAttribute="centerX" secondItem="R4t-Ef-SON" secondAttribute="centerX" id="7yp-sX-r4J"/>
-                                    <constraint firstItem="yys-jx-8Jp" firstAttribute="top" secondItem="X6Z-RB-rYr" secondAttribute="bottom" constant="40" id="8oP-KW-Hv7"/>
+                                    <constraint firstItem="p6z-4G-qFj" firstAttribute="leading" secondItem="R4t-Ef-SON" secondAttribute="leading" id="USz-Pj-J4m"/>
                                     <constraint firstAttribute="bottom" secondItem="oI8-fS-uRG" secondAttribute="bottom" id="Y5n-1d-DXB"/>
                                     <constraint firstAttribute="trailing" secondItem="oI8-fS-uRG" secondAttribute="trailing" id="kDR-wM-I8K"/>
-                                    <constraint firstAttribute="trailing" secondItem="yys-jx-8Jp" secondAttribute="trailing" id="pls-0X-dmY"/>
+                                    <constraint firstAttribute="trailing" secondItem="p6z-4G-qFj" secondAttribute="trailing" constant="1" id="l02-dm-Ube"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorOne">
@@ -305,11 +289,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="yys-jx-8Jp" id="IF9-Ag-WIB"/>
                         <outlet property="eatBtn" destination="idi-JB-thH" id="NEW-li-gE8"/>
                         <outlet property="selectBtn" destination="L8f-VB-qHs" id="iZR-s1-Bp1"/>
                         <outlet property="selectItemsStk" destination="qxe-1Z-2M7" id="AP2-Kz-FO3"/>
                         <outlet property="selectedItemsLbl" destination="X6Z-RB-rYr" id="OxF-gG-dgU"/>
+                        <outlet property="tableView" destination="p6z-4G-qFj" id="KSw-84-5ZY"/>
                         <segue destination="jyc-Rh-bMC" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainViewControllerWithSegue:" id="MdB-cu-OeH"/>
                         <segue destination="7k6-54-lV1" kind="show" identifier="foodDetailSegue" id="LHo-dL-BDo"/>
                     </connections>
@@ -356,10 +340,12 @@
                                                 <color key="backgroundColor" red="0.93371518779999996" green="0.93371518779999996" blue="0.93371518779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="97l-Ef-DUT" firstAttribute="centerY" secondItem="9LZ-4r-Oce" secondAttribute="centerY" id="9Z4-gN-7lk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="97l-Ef-DUT" secondAttribute="trailing" constant="8" id="Bfp-lj-dQh"/>
                                                     <constraint firstItem="otI-Xs-7JN" firstAttribute="leading" secondItem="9LZ-4r-Oce" secondAttribute="leading" id="NoZ-A3-7KH"/>
                                                     <constraint firstItem="97l-Ef-DUT" firstAttribute="centerX" secondItem="9LZ-4r-Oce" secondAttribute="centerX" id="O9t-jz-VNz"/>
                                                     <constraint firstAttribute="width" constant="128" id="ZGp-6O-IT1"/>
                                                     <constraint firstAttribute="bottom" secondItem="otI-Xs-7JN" secondAttribute="bottom" id="act-O0-hWW"/>
+                                                    <constraint firstItem="97l-Ef-DUT" firstAttribute="leading" secondItem="9LZ-4r-Oce" secondAttribute="leading" constant="8" id="be3-BZ-GUT"/>
                                                     <constraint firstItem="otI-Xs-7JN" firstAttribute="top" secondItem="9LZ-4r-Oce" secondAttribute="top" id="c6X-xh-ONc"/>
                                                     <constraint firstAttribute="trailing" secondItem="otI-Xs-7JN" secondAttribute="trailing" id="hVm-VE-kzP"/>
                                                     <constraint firstAttribute="height" constant="128" id="jv4-me-dvg"/>

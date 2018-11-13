@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class FoodCardCell : UICollectionViewCell {
+public class FoodCardCell : UITableViewCell {
     
     @IBOutlet weak var foodNameLbl: UILabel!
     
@@ -49,8 +49,8 @@ public class FoodCardCell : UICollectionViewCell {
         }
     }
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
     }
     
