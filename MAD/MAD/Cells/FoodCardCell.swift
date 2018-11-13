@@ -13,11 +13,11 @@ public class FoodCardCell : UICollectionViewCell {
     @IBOutlet weak var foodNameLbl: UILabel!
     
     @IBOutlet weak var calorieValueLbl: UILabel!
-    @IBOutlet weak var carbValueLbl: UILabel!
-    @IBOutlet weak var proteinValueLbl: UILabel!
-    @IBOutlet weak var fatValueLbl: UILabel!
     @IBOutlet weak var foodImg: UIImageView!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var descTxtView: UITextView!
+    @IBOutlet weak var highlightView: RoundedCardView!
+    
     
     public var food: Food? {
         didSet {
@@ -28,11 +28,9 @@ public class FoodCardCell : UICollectionViewCell {
                 foodImg.image = food.image
                 
                 foodNameLbl.text = String(describing: food.name!)
-                calorieValueLbl.text = "\(food.calorieBreakdown.totalCalories)"
-                carbValueLbl.text = "\(food.calorieBreakdown.totalCarbs)g"
-                proteinValueLbl.text = "\(food.calorieBreakdown.totalProtein)g"
-                fatValueLbl.text = "\(food.calorieBreakdown.totalFat)g"
+                calorieValueLbl.text = "\(food.calorieBreakdown.totalCalories.internationalize!) kCal"
                 
+                descTxtView.text = food.description
                 setupView()
             }
         }
@@ -43,10 +41,10 @@ public class FoodCardCell : UICollectionViewCell {
     public var isBlue: Bool = false {
         didSet {
             if (isBlue) {
-                cardView?.backgroundColor = UIColor(red: 220/255, green: 235/255, blue: 255/255, alpha: 1.0)
+                highlightView?.alpha = 1.0
             }
             else {
-                cardView?.backgroundColor = UIColor.white
+                highlightView?.alpha = 0.0
             }
         }
     }
@@ -63,9 +61,9 @@ public class FoodCardCell : UICollectionViewCell {
     
     // Method to set up the round corners of the food image
     private func setupView() {
-        self.backgroundColor = UIColor.clear
-        foodImg?.layer.cornerRadius = 10.0
         foodImg?.clipsToBounds = true
+        descTxtView?.textContainer.lineBreakMode = .byTruncatingTail
+        highlightView?.alpha = 0.0
     }
     
 }

@@ -10,15 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainViewController-->
-        <scene sceneID="FnP-xa-GFm">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MainViewController" storyboardName="Main" referencedIdentifier="MainViewController" id="hvM-cB-wVv" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C9n-ia-hBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="sUs-Sh-R0C" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="166" y="539"/>
-        </scene>
         <!--Settings View Controller-->
         <scene sceneID="UnI-AL-gt8">
             <objects>
@@ -30,7 +21,7 @@
                             <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6PD-zg-cGj" customClass="GradientView" customModule="MAD" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSu-Bq-DII">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="User Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSu-Bq-DII">
                                         <rect key="frame" x="124" y="44" width="127" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="127" id="l5T-pF-DHx"/>
@@ -98,31 +89,17 @@
                                     <action selector="onSaveClicked:" destination="x4i-lV-RJe" eventType="touchUpInside" id="XuY-B6-HvW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t36-W7-Xaa">
-                                <rect key="frame" x="16" y="44" width="39" height="33"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onBackClicked:" destination="x4i-lV-RJe" eventType="touchUpInside" id="W3M-cT-R7L"/>
-                                    <action selector="onSaveClicked:" destination="x4i-lV-RJe" eventType="touchUpInside" id="OGa-Sy-tNJ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="d7D-Zz-rqi" firstAttribute="top" secondItem="TY9-Xb-e1W" secondAttribute="top" constant="24" id="25k-3g-2dx"/>
                             <constraint firstItem="uFk-YK-eCP" firstAttribute="top" secondItem="ezA-L0-CkK" secondAttribute="bottom" constant="8" id="H1B-fy-wbf"/>
                             <constraint firstItem="ow1-l5-PgQ" firstAttribute="leading" secondItem="ROq-Yw-9SR" secondAttribute="trailing" constant="8" id="Iwm-UX-14m"/>
-                            <constraint firstItem="t36-W7-Xaa" firstAttribute="leading" secondItem="TY9-Xb-e1W" secondAttribute="leading" constant="16" id="MeM-lT-yLq"/>
                             <constraint firstItem="6PD-zg-cGj" firstAttribute="top" secondItem="5RM-hs-xNs" secondAttribute="top" id="PUw-xN-LT6"/>
                             <constraint firstItem="YO0-8l-29p" firstAttribute="top" secondItem="ROq-Yw-9SR" secondAttribute="bottom" constant="8" id="RPi-iS-7QJ"/>
                             <constraint firstItem="ow1-l5-PgQ" firstAttribute="top" secondItem="uFk-YK-eCP" secondAttribute="bottom" constant="38" id="UMa-oO-T2h"/>
                             <constraint firstItem="ROq-Yw-9SR" firstAttribute="top" secondItem="uFk-YK-eCP" secondAttribute="bottom" constant="38" id="Y1g-QA-0gC"/>
                             <constraint firstItem="YO0-8l-29p" firstAttribute="top" secondItem="ow1-l5-PgQ" secondAttribute="bottom" constant="8" id="Zp0-B6-mSv"/>
-                            <constraint firstItem="t36-W7-Xaa" firstAttribute="top" secondItem="d7D-Zz-rqi" secondAttribute="top" id="aE0-Om-hXX"/>
-                            <constraint firstItem="rSu-Bq-DII" firstAttribute="top" secondItem="t36-W7-Xaa" secondAttribute="top" id="e6N-5J-ofb"/>
                             <constraint firstItem="ezA-L0-CkK" firstAttribute="top" secondItem="TY9-Xb-e1W" secondAttribute="top" constant="90" id="g5b-fD-Jkl"/>
                             <constraint firstItem="6PD-zg-cGj" firstAttribute="trailing" secondItem="TY9-Xb-e1W" secondAttribute="trailing" id="jCl-di-wFQ"/>
                             <constraint firstItem="6PD-zg-cGj" firstAttribute="bottom" secondItem="TY9-Xb-e1W" secondAttribute="bottom" id="k7F-MK-vvC"/>
@@ -141,7 +118,6 @@
                         <outlet property="lblCalories" destination="ow1-l5-PgQ" id="kxM-EP-zMK"/>
                         <outlet property="sldCalories" destination="YO0-8l-29p" id="713-oQ-1l3"/>
                         <outlet property="txtName" destination="uFk-YK-eCP" id="nx7-na-R9a"/>
-                        <segue destination="sUs-Sh-R0C" kind="unwind" identifier="unwindToMainSegue" unwindAction="unwindToMainViewControllerWithSegue:" id="C7P-c5-c6B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJX-gL-ORE" userLabel="First Responder" sceneMemberID="firstResponder"/>

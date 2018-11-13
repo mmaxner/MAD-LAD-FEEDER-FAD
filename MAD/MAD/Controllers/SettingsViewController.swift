@@ -31,7 +31,7 @@ class SettingsViewController: UIViewController {
         lblCalories.text = "\(Int(sldCalories.value))"
     }
     
-    @IBAction func onBackClicked(_ sender: UIButton) {
+    @IBAction func onBackClicked(_ sender: Any) {
         performSegue(withIdentifier: "unwindToMainSegue", sender: sender)
     }
     

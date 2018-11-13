@@ -16,7 +16,6 @@
 		3D20AA46216264F900D1DC63 /* MADUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA45216264F900D1DC63 /* MADUITests.swift */; };
 		3D20AA542162669900D1DC63 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA532162669900D1DC63 /* GradientView.swift */; };
 		3D20AA58216268D700D1DC63 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D20AA57216268D700D1DC63 /* Settings.storyboard */; };
-		3D20AA5C2162691400D1DC63 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA5B2162691400D1DC63 /* FoodListViewController.swift */; };
 		3D20AA5E2162692100D1DC63 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA5D2162692100D1DC63 /* SettingsViewController.swift */; };
 		3D20AA6121628EEB00D1DC63 /* CalorieProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA6021628EEB00D1DC63 /* CalorieProgressBar.swift */; };
 		3D2F15412162B58C00B15DC3 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F15402162B58C00B15DC3 /* Food.swift */; };
@@ -32,6 +31,13 @@
 		3DCC1AC82163EF3B0092C53A /* FoodContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AC72163EF3B0092C53A /* FoodContainerViewController.swift */; };
 		3FBB6988219753CC0080BFB8 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */; };
 		BDEA09E821979C4500D73AC8 /* CustomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09E721979C4500D73AC8 /* CustomBarButton.swift */; };
+		BDEA09EE2197DD2700D73AC8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09ED2197DD2700D73AC8 /* CustomButton.swift */; };
+		BDEA09F02199C24B00D73AC8 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09EF2199C24B00D73AC8 /* Int+Ext.swift */; };
+		BDEA09F22199C57D00D73AC8 /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F12199C57D00D73AC8 /* CustomToolbar.swift */; };
+		BDEA09F42199F4EB00D73AC8 /* FoodDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F32199F4EB00D73AC8 /* FoodDetailController.swift */; };
+		BDEA09F62199F58800D73AC8 /* FoodDetailTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F52199F58800D73AC8 /* FoodDetailTableController.swift */; };
+		BDEA09F8219A4FA100D73AC8 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F7219A4FA100D73AC8 /* UITextField+Ext.swift */; };
+		BDEA09FA219B0FFA00D73AC8 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F9219B0FFA00D73AC8 /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +73,6 @@
 		3D20AA47216264F900D1DC63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D20AA532162669900D1DC63 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		3D20AA57216268D700D1DC63 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		3D20AA5B2162691400D1DC63 /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		3D20AA5D2162692100D1DC63 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3D20AA6021628EEB00D1DC63 /* CalorieProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieProgressBar.swift; sourceTree = "<group>"; };
 		3D2F15402162B58C00B15DC3 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
@@ -83,6 +88,13 @@
 		3DCC1AC72163EF3B0092C53A /* FoodContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodContainerViewController.swift; sourceTree = "<group>"; };
 		3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		BDEA09E721979C4500D73AC8 /* CustomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarButton.swift; sourceTree = "<group>"; };
+		BDEA09ED2197DD2700D73AC8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		BDEA09EF2199C24B00D73AC8 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
+		BDEA09F12199C57D00D73AC8 /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
+		BDEA09F32199F4EB00D73AC8 /* FoodDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailController.swift; sourceTree = "<group>"; };
+		BDEA09F52199F58800D73AC8 /* FoodDetailTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailTableController.swift; sourceTree = "<group>"; };
+		BDEA09F7219A4FA100D73AC8 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		BDEA09F9219B0FFA00D73AC8 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +181,9 @@
 			children = (
 				3DCC1AC72163EF3B0092C53A /* FoodContainerViewController.swift */,
 				3D20AA27216264F900D1DC63 /* MainViewController.swift */,
-				3D20AA5B2162691400D1DC63 /* FoodListViewController.swift */,
 				3D20AA5D2162692100D1DC63 /* SettingsViewController.swift */,
+				BDEA09F32199F4EB00D73AC8 /* FoodDetailController.swift */,
+				BDEA09F52199F58800D73AC8 /* FoodDetailTableController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +207,8 @@
 				3DCC1AC52163D8A70092C53A /* RoundedCardView.swift */,
 				3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */,
 				BDEA09E721979C4500D73AC8 /* CustomBarButton.swift */,
+				BDEA09ED2197DD2700D73AC8 /* CustomButton.swift */,
+				BDEA09F12199C57D00D73AC8 /* CustomToolbar.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -215,6 +230,9 @@
 				3DCC1AB421639DC60092C53A /* UIColor+Ext.swift */,
 				3DCC1AB621639E4F0092C53A /* UILabel+Ext.swift */,
 				3DCC1AB82163B33D0092C53A /* UIButton+Ext.swift */,
+				BDEA09EF2199C24B00D73AC8 /* Int+Ext.swift */,
+				BDEA09F7219A4FA100D73AC8 /* UITextField+Ext.swift */,
+				BDEA09F9219B0FFA00D73AC8 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -364,21 +382,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D20AA6121628EEB00D1DC63 /* CalorieProgressBar.swift in Sources */,
+				BDEA09F22199C57D00D73AC8 /* CustomToolbar.swift in Sources */,
+				BDEA09EE2197DD2700D73AC8 /* CustomButton.swift in Sources */,
 				3DCC1AC02163D6470092C53A /* FoodCardCell.swift in Sources */,
 				3DCC1AC82163EF3B0092C53A /* FoodContainerViewController.swift in Sources */,
 				3DCC1AC62163D8A70092C53A /* RoundedCardView.swift in Sources */,
+				BDEA09FA219B0FFA00D73AC8 /* String+Ext.swift in Sources */,
 				BDEA09E821979C4500D73AC8 /* CustomBarButton.swift in Sources */,
 				3D20AA28216264F900D1DC63 /* MainViewController.swift in Sources */,
 				3D20AA26216264F900D1DC63 /* AppDelegate.swift in Sources */,
-				3D20AA5C2162691400D1DC63 /* FoodListViewController.swift in Sources */,
 				3DCC1AB521639DC60092C53A /* UIColor+Ext.swift in Sources */,
 				3D2F15412162B58C00B15DC3 /* Food.swift in Sources */,
 				3DCC1AB22162EFB60092C53A /* Constants.swift in Sources */,
 				3D20AA5E2162692100D1DC63 /* SettingsViewController.swift in Sources */,
 				3D20AA542162669900D1DC63 /* GradientView.swift in Sources */,
 				3FBB6988219753CC0080BFB8 /* CustomNavigationBar.swift in Sources */,
+				BDEA09F62199F58800D73AC8 /* FoodDetailTableController.swift in Sources */,
+				BDEA09F02199C24B00D73AC8 /* Int+Ext.swift in Sources */,
 				3DCC1AB92163B33D0092C53A /* UIButton+Ext.swift in Sources */,
 				3D7F50302162B9930074E9F0 /* UserSettings.swift in Sources */,
+				BDEA09F42199F4EB00D73AC8 /* FoodDetailController.swift in Sources */,
+				BDEA09F8219A4FA100D73AC8 /* UITextField+Ext.swift in Sources */,
 				3DCC1AB721639E4F0092C53A /* UILabel+Ext.swift in Sources */,
 				3D7F502F2162B9930074E9F0 /* NutritionalFacts.swift in Sources */,
 			);
