@@ -27,6 +27,15 @@ public class FoodContainerViewController : UIViewController {
         }
     }
     
+    private enum TranslatedText: String {
+        case Select = "Select"
+        case Cancel = "Cancel"
+        
+        public var string: String {
+            return NSLocalizedString(self.rawValue, comment: "")
+        }
+    }
+    
     // Set the sections of Food available, which is a list of names (String) and an array of Foods
     var foodDictionary: [Food]!
     
@@ -63,7 +72,7 @@ public class FoodContainerViewController : UIViewController {
     @IBAction func onSelectClicked(_ sender: Any) {
         isSelecting = !isSelecting
         
-        selectBtn.title = isSelecting ? "Cancel" : "Select"
+        selectBtn.title = isSelecting ? TranslatedText.Cancel.string : TranslatedText.Select.string
         
         // Toggle 'Items Selected: 0' stack view
         UIView.animate(withDuration: 0.25, animations: {

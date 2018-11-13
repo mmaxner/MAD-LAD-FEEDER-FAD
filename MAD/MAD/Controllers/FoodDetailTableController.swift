@@ -68,13 +68,6 @@ public class FoodDetailTableController: UITableViewController {
             proteinTxtField?.text = nil
             fatTxtField?.text = nil
         }
-        
-//        if editable {
-//            caloriesTxtField?.text = caloriesTxtField.text?.cleanNumberFormat
-//            carbsTxtField?.text = carbsTxtField.text?.cleanNumberFormat
-//            proteinTxtField?.text = proteinTxtField.text?.cleanNumberFormat
-//            fatTxtField?.text = fatTxtField?.text?.cleanNumberFormat
-//        }
     }
     
     public func validate() -> Bool {
@@ -94,6 +87,6 @@ extension FoodDetailTableController : UITextFieldDelegate {
         }
         
         
-        return text.count < 8 && string.range(of: "^[0-9]*$", options: .regularExpression) != nil
+        return text.count < 8 && string.range(of: "^[0-9\\b]*$", options: .regularExpression) != nil
     }
 }

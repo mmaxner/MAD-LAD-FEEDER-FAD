@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  MAD
+
+  Created by Conner Henry on 2018-11-13.
+  Copyright © 2018 Conner Henry. All rights reserved.
+*/
+"Cancel" = "Annuler";
+"Edit" = "Modifier";
+"Select" = "Sélectionnez";
+"Save" = "Enregistrez";
+"New Food" = "Nouvelle nourriture";
+"Enter description..." = "Entrez une description...";
+"Enter Food Name..." = "Entrez le nom de l'aliment...";
+"Form not complete" = "Formulaire non complet";
+"Some information on this form has not been complete, and cannot save." = "Certaines informations de ce formulaire n’ont pas été complètes et ne peuvent pas être sauvegardées.";
+"Ok" = "D'accord";
+"Banana" = "Banane";
+"Bananas have long been exploited by humans all the way back from 1800s, when French explorer Alexandre 'Anana found the first Banana." = "La banane a longtemps été exploitée par l'homme depuis les années 1800, lorsque l'explorateur français Alexandre Anana a découvert la première banane.";
+"Orange" = "Orange";
+"Named after the colour, tastes like it too!" = "Nommé d'après la couleur, le goût aussi!";
+"Apple" = "Pomme";
+"Apples were first discovered by Newton, when he got hit by one." = "Les pommes ont été découvertes par Newton pour la première fois.";
+"Cucumber" = "Concombre";
+"The younger cousin of the Pickle, Cucumbers were discovered in Spain when Pickles were grown in soil that lacked 'pickle juice'." = "Le plus jeune cousin des cornichons, les concombres ont été découverts en Espagne lorsque les cornichons étaient cultivés dans un sol dépourvu de «jus de cornichons».";
+"Carrot" = "Carotte";
+"Good for your eyes, bad for the Germans." = "Bon pour vos yeux, mauvais pour les Allemands.";
+"Peas" = "Pois";
+"Similar to a lentil, Peas are the worst vegetable taste wise, but very good nutrition wise." = "Semblables à une lentille, les pois sont les pires en termes de goût végétal, mais de très bonne nutrition.";
+"Almonds" = "Amandes";
+"The only milkable memeber of the Nut family, Almonds are said to be closer to mammals then legumes." = "Seul membre laitable de la famille des noix, les amandes seraient plus proches des mammifères que des légumineuses.";
+"Cashews" = "Noix de cajou";
+"Famous south american nuts, Cashews are named after there Chewy consistency." = "Noix de cajou célèbres, les noix de cajou sont nommées d'après leur consistance moelleuse.";

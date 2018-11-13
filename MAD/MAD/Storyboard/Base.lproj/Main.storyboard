@@ -296,7 +296,7 @@
                         <viewLayoutGuide key="safeArea" id="SqS-ly-1tj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Food List" id="ohj-gn-DYd">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="CZV-jz-akl"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="cIu-2g-qPe"/>
                         <barButtonItem key="rightBarButtonItem" title="Select" id="L8f-VB-qHs">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -726,7 +726,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="buA-SZ-CvE">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="onBackClicked:" destination="368-Vk-KVn" id="263-Y3-Izn"/>
+                                <action selector="onSaveClicked:" destination="368-Vk-KVn" id="jFk-3K-SGh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -734,9 +734,11 @@
                         <outlet property="lblCalories" destination="xaL-Xe-wdg" id="udn-HL-XQ4"/>
                         <outlet property="sldCalories" destination="JuO-h0-6l8" id="lp6-AK-gor"/>
                         <outlet property="txtName" destination="ZU3-ig-5yM" id="fNK-f5-qX1"/>
+                        <segue destination="tsg-NN-ba3" kind="unwind" identifier="unwindToMainSegue" unwindAction="unwindToMainViewControllerWithSegue:" id="LKe-Ju-Vbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeB-5S-F8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tsg-NN-ba3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="82" y="933"/>
         </scene>

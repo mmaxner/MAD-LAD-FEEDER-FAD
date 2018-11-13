@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
         lblCalories.text = "\(UserSettings.instance.maxCalories)"
     }
     
-    @IBAction func onSaveClicked(_ sender: UIButton) {
+    @IBAction func onSaveClicked(_ sender: Any) {
         UserSettings.instance.name = txtName.text!
         UserSettings.instance.maxCalories = Int(sldCalories.value)
         performSegue(withIdentifier: "unwindToMainSegue", sender: sender)
@@ -29,10 +29,6 @@ class SettingsViewController: UIViewController {
     
     @IBAction func sldCalories_ValueChanged(_ sender: UISlider) {
         lblCalories.text = "\(Int(sldCalories.value))"
-    }
-    
-    @IBAction func onBackClicked(_ sender: Any) {
-        performSegue(withIdentifier: "unwindToMainSegue", sender: sender)
     }
     
 }

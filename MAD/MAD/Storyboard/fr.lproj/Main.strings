@@ -1,0 +1,126 @@
+
+/* Class = "UILabel"; text = "0g"; ObjectID = "2gO-rF-onc"; */
+"2gO-rF-onc.text" = "0g";
+
+/* Class = "UILabel"; text = "Fat"; ObjectID = "6wR-DE-1Sm"; */
+"6wR-DE-1Sm.text" = "Graisse";
+
+/* Class = "UILabel"; text = "Choose image"; ObjectID = "97l-Ef-DUT"; */
+"97l-Ef-DUT.text" = "Choisir une image";
+
+/* Class = "UITextField"; placeholder = "Enter food name"; ObjectID = "AIo-yb-3as"; */
+"AIo-yb-3as.placeholder" = "Entrez le nom de l'aliment";
+
+/* Class = "UITextField"; text = "<Food>"; ObjectID = "AIo-yb-3as"; */
+"AIo-yb-3as.text" = "<Food>";
+
+/* Class = "UITextField"; placeholder = "0"; ObjectID = "AO4-4y-XAw"; */
+"AO4-4y-XAw.placeholder" = "0";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "AO4-4y-XAw"; */
+"AO4-4y-XAw.text" = "0";
+
+/* Class = "UILabel"; text = "Carbs"; ObjectID = "B6j-gq-1Wt"; */
+"B6j-gq-1Wt.text" = "Glucides";
+
+/* Class = "UIViewController"; title = "MainController"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "MainController";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "CZV-jz-akl"; */
+"CZV-jz-akl.title" = "Retour";
+
+/* Class = "UILabel"; text = " kCal"; ObjectID = "D9S-wd-fW9"; */
+"D9S-wd-fW9.text" = " kCal";
+
+/* Class = "UILabel"; text = " g"; ObjectID = "G5e-7M-uX1"; */
+"G5e-7M-uX1.text" = " g";
+
+/* Class = "UIBarButtonItem"; title = "Select"; ObjectID = "L8f-VB-qHs"; */
+"L8f-VB-qHs.title" = "Sélectionner";
+
+/* Class = "UILabel"; text = "Carbs:"; ObjectID = "Li3-dc-9L3"; */
+"Li3-dc-9L3.text" = "Glucides:";
+
+/* Class = "UITextField"; placeholder = "0"; ObjectID = "O2T-uX-KuR"; */
+"O2T-uX-KuR.placeholder" = "0";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "O2T-uX-KuR"; */
+"O2T-uX-KuR.text" = "0";
+
+/* Class = "UILabel"; text = "Protein"; ObjectID = "OkZ-qc-4Tq"; */
+"OkZ-qc-4Tq.text" = "Protéine";
+
+/* Class = "UIBarButtonItem"; title = "Gear"; ObjectID = "QFb-kI-c42"; */
+"QFb-kI-c42.title" = "Gear";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "QZs-A6-QcM"; */
+"QZs-A6-QcM.title" = "Title";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "W1E-Gx-lKx"; */
+"W1E-Gx-lKx.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "X6Z-RB-rYr"; */
+"X6Z-RB-rYr.text" = "0";
+
+/* Class = "UILabel"; text = "0g"; ObjectID = "a3Z-cf-xim"; */
+"a3Z-cf-xim.text" = "0g";
+
+/* Class = "UITextField"; placeholder = "0"; ObjectID = "dgx-bi-k83"; */
+"dgx-bi-k83.placeholder" = "0";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "dgx-bi-k83"; */
+"dgx-bi-k83.text" = "0";
+
+/* Class = "UILabel"; text = "Calories"; ObjectID = "dld-XP-hXf"; */
+"dld-XP-hXf.text" = "Les calories";
+
+/* Class = "UINavigationItem"; title = "User Settings"; ObjectID = "eAk-2x-1tG"; */
+"eAk-2x-1tG.title" = "Paramètres utilisateur";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "eik-oR-AyD"; */
+"eik-oR-AyD.text" = "Prénom";
+
+/* Class = "UILabel"; text = "Calories: "; ObjectID = "fSM-i4-JKw"; */
+"fSM-i4-JKw.text" = "Les calories: ";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "fyC-wW-nNC"; */
+"fyC-wW-nNC.title" = "Edit";
+
+/* Class = "UILabel"; text = "Selected Items"; ObjectID = "g5l-Bf-tTp"; */
+"g5l-Bf-tTp.text" = "Articles sélectionnés";
+
+/* Class = "UILabel"; text = "0g"; ObjectID = "h2y-7S-I9C"; */
+"h2y-7S-I9C.text" = "0g";
+
+/* Class = "UIBarButtonItem"; title = "Eat"; ObjectID = "idi-JB-thH"; */
+"idi-JB-thH.title" = "Manger";
+
+/* Class = "UIBarButtonItem"; title = "Fork"; ObjectID = "kzk-2R-r9s"; */
+"kzk-2R-r9s.title" = "Fork";
+
+/* Class = "UILabel"; text = "Fat:"; ObjectID = "lbA-2B-CrK"; */
+"lbA-2B-CrK.text" = "Graisse:";
+
+/* Class = "UILabel"; text = "Protein:"; ObjectID = "mvA-9G-Hnc"; */
+"mvA-9G-Hnc.text" = "Protéine:";
+
+/* Class = "UILabel"; text = " g"; ObjectID = "oAQ-nW-gHw"; */
+"oAQ-nW-gHw.text" = " g";
+
+/* Class = "UINavigationItem"; title = "Food List"; ObjectID = "ohj-gn-DYd"; */
+"ohj-gn-DYd.title" = "Liste des aliments";
+
+/* Class = "UILabel"; text = " g"; ObjectID = "ree-Ze-w7U"; */
+"ree-Ze-w7U.text" = " g";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vyo-l1-EZg"; */
+"vyo-l1-EZg.text" = "Label";
+
+/* Class = "UILabel"; text = "5000"; ObjectID = "xaL-Xe-wdg"; */
+"xaL-Xe-wdg.text" = "5000";
+
+/* Class = "UITextField"; placeholder = "0"; ObjectID = "zid-fK-w6e"; */
+"zid-fK-w6e.placeholder" = "0";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "zid-fK-w6e"; */
+"zid-fK-w6e.text" = "0";

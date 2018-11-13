@@ -15,7 +15,6 @@
 		3D20AA3B216264F900D1DC63 /* MADTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA3A216264F900D1DC63 /* MADTests.swift */; };
 		3D20AA46216264F900D1DC63 /* MADUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA45216264F900D1DC63 /* MADUITests.swift */; };
 		3D20AA542162669900D1DC63 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA532162669900D1DC63 /* GradientView.swift */; };
-		3D20AA58216268D700D1DC63 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D20AA57216268D700D1DC63 /* Settings.storyboard */; };
 		3D20AA5E2162692100D1DC63 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA5D2162692100D1DC63 /* SettingsViewController.swift */; };
 		3D20AA6121628EEB00D1DC63 /* CalorieProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20AA6021628EEB00D1DC63 /* CalorieProgressBar.swift */; };
 		3D2F15412162B58C00B15DC3 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F15402162B58C00B15DC3 /* Food.swift */; };
@@ -31,13 +30,13 @@
 		3DCC1AC82163EF3B0092C53A /* FoodContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AC72163EF3B0092C53A /* FoodContainerViewController.swift */; };
 		3FBB6988219753CC0080BFB8 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */; };
 		BDEA09E821979C4500D73AC8 /* CustomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09E721979C4500D73AC8 /* CustomBarButton.swift */; };
-		BDEA09EE2197DD2700D73AC8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09ED2197DD2700D73AC8 /* CustomButton.swift */; };
 		BDEA09F02199C24B00D73AC8 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09EF2199C24B00D73AC8 /* Int+Ext.swift */; };
 		BDEA09F22199C57D00D73AC8 /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F12199C57D00D73AC8 /* CustomToolbar.swift */; };
 		BDEA09F42199F4EB00D73AC8 /* FoodDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F32199F4EB00D73AC8 /* FoodDetailController.swift */; };
 		BDEA09F62199F58800D73AC8 /* FoodDetailTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F52199F58800D73AC8 /* FoodDetailTableController.swift */; };
 		BDEA09F8219A4FA100D73AC8 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F7219A4FA100D73AC8 /* UITextField+Ext.swift */; };
 		BDEA09FA219B0FFA00D73AC8 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F9219B0FFA00D73AC8 /* String+Ext.swift */; };
+		BDEA0A02219B7C8F00D73AC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDEA0A04219B7C8F00D73AC8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 		3D20AA45216264F900D1DC63 /* MADUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADUITests.swift; sourceTree = "<group>"; };
 		3D20AA47216264F900D1DC63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D20AA532162669900D1DC63 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		3D20AA57216268D700D1DC63 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		3D20AA5D2162692100D1DC63 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3D20AA6021628EEB00D1DC63 /* CalorieProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieProgressBar.swift; sourceTree = "<group>"; };
 		3D2F15402162B58C00B15DC3 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
@@ -88,13 +86,17 @@
 		3DCC1AC72163EF3B0092C53A /* FoodContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodContainerViewController.swift; sourceTree = "<group>"; };
 		3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		BDEA09E721979C4500D73AC8 /* CustomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarButton.swift; sourceTree = "<group>"; };
-		BDEA09ED2197DD2700D73AC8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		BDEA09EF2199C24B00D73AC8 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		BDEA09F12199C57D00D73AC8 /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
 		BDEA09F32199F4EB00D73AC8 /* FoodDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailController.swift; sourceTree = "<group>"; };
 		BDEA09F52199F58800D73AC8 /* FoodDetailTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailTableController.swift; sourceTree = "<group>"; };
 		BDEA09F7219A4FA100D73AC8 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		BDEA09F9219B0FFA00D73AC8 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		BDEA09FD219B79AE00D73AC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		BDEA09FE219B79D000D73AC8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		BDEA09FF219B79D000D73AC8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BDEA0A03219B7C8F00D73AC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BDEA0A05219B7C9300D73AC8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				3D20AA25216264F900D1DC63 /* AppDelegate.swift */,
 				3D20AA2C216264F900D1DC63 /* Assets.xcassets */,
 				3D20AA31216264F900D1DC63 /* Info.plist */,
+				BDEA0A04219B7C8F00D73AC8 /* Localizable.strings */,
 			);
 			path = MAD;
 			sourceTree = "<group>";
@@ -193,7 +196,6 @@
 			children = (
 				3D20AA29216264F900D1DC63 /* Main.storyboard */,
 				3D20AA2E216264F900D1DC63 /* LaunchScreen.storyboard */,
-				3D20AA57216268D700D1DC63 /* Settings.storyboard */,
 				3DCC1AC32163D7F40092C53A /* FoodCardView.xib */,
 			);
 			path = Storyboard;
@@ -207,7 +209,6 @@
 				3DCC1AC52163D8A70092C53A /* RoundedCardView.swift */,
 				3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */,
 				BDEA09E721979C4500D73AC8 /* CustomBarButton.swift */,
-				BDEA09ED2197DD2700D73AC8 /* CustomButton.swift */,
 				BDEA09F12199C57D00D73AC8 /* CustomToolbar.swift */,
 			);
 			path = "Custom Views";
@@ -334,6 +335,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 3D20AA19216264F900D1DC63;
 			productRefGroup = 3D20AA23216264F900D1DC63 /* Products */;
@@ -352,11 +354,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEA0A02219B7C8F00D73AC8 /* Localizable.strings in Resources */,
 				3DCC1AC42163D7F40092C53A /* FoodCardView.xib in Resources */,
 				3D20AA30216264F900D1DC63 /* LaunchScreen.storyboard in Resources */,
 				3D20AA2D216264F900D1DC63 /* Assets.xcassets in Resources */,
 				3D20AA2B216264F900D1DC63 /* Main.storyboard in Resources */,
-				3D20AA58216268D700D1DC63 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +385,6 @@
 			files = (
 				3D20AA6121628EEB00D1DC63 /* CalorieProgressBar.swift in Sources */,
 				BDEA09F22199C57D00D73AC8 /* CustomToolbar.swift in Sources */,
-				BDEA09EE2197DD2700D73AC8 /* CustomButton.swift in Sources */,
 				3DCC1AC02163D6470092C53A /* FoodCardCell.swift in Sources */,
 				3DCC1AC82163EF3B0092C53A /* FoodContainerViewController.swift in Sources */,
 				3DCC1AC62163D8A70092C53A /* RoundedCardView.swift in Sources */,
@@ -444,6 +445,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				3D20AA2A216264F900D1DC63 /* Base */,
+				BDEA09FD219B79AE00D73AC8 /* en */,
+				BDEA09FE219B79D000D73AC8 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -452,8 +455,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				3D20AA2F216264F900D1DC63 /* Base */,
+				BDEA09FF219B79D000D73AC8 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BDEA0A04219B7C8F00D73AC8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDEA0A03219B7C8F00D73AC8 /* en */,
+				BDEA0A05219B7C9300D73AC8 /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -463,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -520,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

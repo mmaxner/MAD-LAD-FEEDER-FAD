@@ -11,13 +11,13 @@ import UIKit
 class MainViewController: UIViewController {
     // Custom CircleProgressBar for the daily calorie amount
     @IBOutlet weak var calorieProgress: CalorieProgressBar!
-    // MARK: Nav Bar
 
     // MARK: Macro level UILabels
     @IBOutlet weak var carbsLbl: UILabel!
     @IBOutlet weak var proteinLbl: UILabel!
     @IBOutlet weak var fatLbl: UILabel!
     
+    // MARK: Nav Bar
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var macroStackView: UIStackView!
 
@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         
         // Set name to welcome when first loading the app
         nameLbl.alpha = 0.0
-        nameLbl.text = "Welcome"
+        nameLbl.text = NSLocalizedString("Welcome", comment: "")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,9 +65,9 @@ class MainViewController: UIViewController {
     
     // Loads the User's total Carb, Protein, and Fat consumed
     private func loadMacroValues() {
-        carbsLbl.text = "\(UserSettings.instance.calorieBreakdown.totalCarbs)g"
-        proteinLbl.text = "\(UserSettings.instance.calorieBreakdown.totalProtein)g"
-        fatLbl.text = "\(UserSettings.instance.calorieBreakdown.totalFat)g"
+        carbsLbl.text = "\(UserSettings.instance.calorieBreakdown.totalCarbs.internationalize ?? "0")g"
+        proteinLbl.text = "\(UserSettings.instance.calorieBreakdown.totalProtein.internationalize ?? "0")g"
+        fatLbl.text = "\(UserSettings.instance.calorieBreakdown.totalFat.internationalize ?? "0")g"
     }
 
     // MARK: - IBActions for Controls

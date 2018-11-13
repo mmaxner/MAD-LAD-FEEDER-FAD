@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  MAD
+
+  Created by Conner Henry on 2018-11-13.
+  Copyright © 2018 Conner Henry. All rights reserved.
+*/
+"Cancel" = "Cancel";
+"Edit" = "Edit";
+"Select" = "Select";
+"Save" = "Save";
+"New Food" = "New Food";
+"Enter description..." = "Enter description...";
+"Enter Food Name..." = "Enter Food Name...";
+"Form not complete" = "Form not complete";
+"Some information on this form has not been complete, and cannot save." = "Some information on this form has not been complete, and cannot save.";
+"Ok" = "Ok";
+"Banana" = "Banana";
+"Bananas have long been exploited by humans all the way back from 1800s, when French explorer Alexandre 'Anana found the first Banana." = "Bananas have long been exploited by humans all the way back from 1800s, when French explorer Alexandre 'Anana found the first Banana.";
+"Orange" = "Orange";
+"Named after the colour, tastes like it too!" = "Named after the colour, tastes like it too!";
+"Apple" = "Apple";
+"Apples were first discovered by Newton, when he got hit by one." = "Apples were first discovered by Newton, when he got hit by one.";
+"Cucumber" = "Cucumber";
+"The younger cousin of the Pickle, Cucumbers were discovered in Spain when Pickles were grown in soil that lacked 'pickle juice'." = "The younger cousin of the Pickle, Cucumbers were discovered in Spain when Pickles were grown in soil that lacked 'pickle juice'.";
+"Carrot" = "Carrot";
+"Good for your eyes, bad for the Germans." = "Good for your eyes, bad for the Germans.";
+"Peas" = "Peas";
+"Similar to a lentil, Peas are the worst vegetable taste wise, but very good nutrition wise." = "Similar to a lentil, Peas are the worst vegetable taste wise, but very good nutrition wise.";
+"Almonds" = "Almonds";
+"The only milkable memeber of the Nut family, Almonds are said to be closer to mammals then legumes." = "The only milkable memeber of the Nut family, Almonds are said to be closer to mammals then legumes.";
+"Cashews" = "Cashews";
+"Famous south american nuts, Cashews are named after there Chewy consistency." = "Famous south american nuts, Cashews are named after there Chewy consistency.";

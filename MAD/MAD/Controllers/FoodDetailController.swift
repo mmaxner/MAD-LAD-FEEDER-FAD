@@ -34,6 +34,13 @@ public class FoodDetailController: UIViewController {
     fileprivate enum TranslatedText: String {
         case DescriptionPlaceholder = "Enter description..."
         case FoodPlaceholder = "Enter Food Name..."
+        case Cancel = "Cancel"
+        case Edit = "Edit"
+        case AlertName = "Form not complete"
+        case AlertMessage = "Some information on this form has not been complete, and cannot save."
+        case Ok = "Ok"
+        case Save = "Save"
+        case NewFood = "New Food"
         
         public var string: String {
             return NSLocalizedString(rawValue, comment: "")
@@ -59,8 +66,8 @@ public class FoodDetailController: UIViewController {
         saveBarBtn = {
             let saveBtn = UIButton(type: .system)
             let font = saveBtn.titleLabel?.font
-            saveBtn.setTitle("Save", for: .normal)
-            saveBtn.setTitle("Save", for: .focused)
+            saveBtn.setTitle(TranslatedText.Save.string, for: .normal)
+            saveBtn.setTitle(TranslatedText.Save.string, for: .focused)
             // Resize font to 17, to match 'Edit/Cancel' button
             saveBtn.titleLabel?.font = UIFont(name: font?.fontName ?? "", size: 17)
             saveBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
@@ -113,7 +120,7 @@ public class FoodDetailController: UIViewController {
             foodNameTxtField.text = nil
             descTxtView.text = TranslatedText.DescriptionPlaceholder.string
             descriptionInDefault = true
-            titleItem?.title = "New Food"
+            titleItem?.title = TranslatedText.NewFood.string
         }
         
         childVC?.setLayout()
@@ -126,7 +133,7 @@ public class FoodDetailController: UIViewController {
     
     private func showEditState() {
         // Toggle edit button title
-        editBtn?.title = editable ? "Cancel" : "Edit"
+        editBtn?.title = editable ? TranslatedText.Cancel.string : TranslatedText.Edit.string
         
         // Toggle back button
         self.navigationItem.setHidesBackButton(editable, animated: true)
@@ -160,10 +167,10 @@ public class FoodDetailController: UIViewController {
     // Method for saving the food item (Adding or updating)
     @objc public func save() {
         if !validate() {
-            let alert = UIAlertController(title: "Form not complete",
-                                          message: "Some information on this form has not been complete, and cannot save.",
+            let alert = UIAlertController(title: TranslatedText.AlertName.string,
+                                          message: TranslatedText.AlertMessage.string,
                                           preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: TranslatedText.Ok.string, style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         else {
