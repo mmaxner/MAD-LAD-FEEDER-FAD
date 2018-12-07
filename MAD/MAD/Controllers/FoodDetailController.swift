@@ -110,10 +110,10 @@ public class FoodDetailController: UIViewController {
     public func setLayout() {
         // Set food info if it exists,
         if let food = food {
-            foodNameTxtField.text = food.name
-            descTxtView.text = food.description
+            foodNameTxtField.text = NSLocalizedString(food.name, comment: "")
+            descTxtView.text = NSLocalizedString(food.description, comment: "")
             foodImgView.image = food.image
-            titleItem?.title = food.name
+            titleItem?.title = NSLocalizedString(food.name, comment: "")
         }
         // Otherwise set info to nil and set title to say 'New Food'
         else {
@@ -177,14 +177,13 @@ public class FoodDetailController: UIViewController {
             // Add new item
             if food == nil {
                 let newFood = Food(name: foodNameTxtField.text!, image: foodImgView.image!, description: descTxtView.text!, macros: childVC.macros)
-                UserSettings.instance.foodList.append(newFood)
+                UserSettings.instance.add(food: newFood)
             }
             // Update item
             else {
-                food.name = foodNameTxtField.text
-                food.image = foodImgView.image
-                food.description = descTxtView.text
-                food.calorieBreakdown = childVC.macros
+                UserSettings.instance.update(
+                    food: food, name: foodNameTxtField.text!, description: descTxtView.text, image: foodImgView.image!, macros: childVC.macros
+                )
             }
             
             onEditClick(self)

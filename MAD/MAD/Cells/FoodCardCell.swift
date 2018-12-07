@@ -27,10 +27,10 @@ public class FoodCardCell : UICollectionViewCell {
                 
                 foodImg.image = food.image
                 
-                foodNameLbl.text = String(describing: food.name!)
+                foodNameLbl.text = NSLocalizedString(String(describing: food.name!), comment: "")
                 calorieValueLbl.text = "\(food.calorieBreakdown.totalCalories.internationalize!) kCal"
                 
-                descTxtView.text = food.description
+                descTxtView.text = NSLocalizedString(food.description, comment: "")
                 setupView()
             }
         }

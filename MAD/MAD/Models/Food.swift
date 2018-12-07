@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 // Class for storing the information on different food
 public class Food {
@@ -15,6 +16,24 @@ public class Food {
     public var image: UIImage?
     public var isSelected: Bool = false
     public var description: String!
+    
+//    public var coreData: NSManagedObject {
+//        
+//    }
+    
+    init(info: FoodInfo) {
+        name = info.name
+        description = info.desc
+        if let data = info.image {
+            image = UIImage(data: data)
+        }
+        
+        calorieBreakdown = NutritionalFacts()
+        calorieBreakdown.totalCalories = Int(info.calories)
+        calorieBreakdown.totalProtein = Int(info.protein)
+        calorieBreakdown.totalCarbs = Int(info.carbs)
+        calorieBreakdown.totalFat = Int(info.fat)
+    }
     
     init(name: String, image: UIImage?, description:String?, calories: Int, protein: Int, fat: Int, carbs: Int) {
         self.name = name

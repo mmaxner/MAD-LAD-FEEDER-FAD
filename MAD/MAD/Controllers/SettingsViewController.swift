@@ -17,8 +17,10 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         txtName.text = UserSettings.instance.name
-        sldCalories.value = Float(UserSettings.instance.maxCalories)
-        lblCalories.text = "\(UserSettings.instance.maxCalories)"
+        if let calories = UserSettings.instance.maxCalories {
+            sldCalories.value = Float(calories)
+            lblCalories.text = "\(calories)"
+        }
     }
     
     @IBAction func onSaveClicked(_ sender: Any) {

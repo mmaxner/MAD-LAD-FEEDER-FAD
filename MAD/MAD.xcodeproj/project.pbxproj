@@ -29,6 +29,7 @@
 		3DCC1AC62163D8A70092C53A /* RoundedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AC52163D8A70092C53A /* RoundedCardView.swift */; };
 		3DCC1AC82163EF3B0092C53A /* FoodContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC1AC72163EF3B0092C53A /* FoodContainerViewController.swift */; };
 		3FBB6988219753CC0080BFB8 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */; };
+		BD74107821B9DD05001F5BF0 /* MAD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD74107621B9DD05001F5BF0 /* MAD.xcdatamodeld */; };
 		BDEA09E821979C4500D73AC8 /* CustomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09E721979C4500D73AC8 /* CustomBarButton.swift */; };
 		BDEA09F02199C24B00D73AC8 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09EF2199C24B00D73AC8 /* Int+Ext.swift */; };
 		BDEA09F22199C57D00D73AC8 /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA09F12199C57D00D73AC8 /* CustomToolbar.swift */; };
@@ -85,6 +86,7 @@
 		3DCC1AC52163D8A70092C53A /* RoundedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCardView.swift; sourceTree = "<group>"; };
 		3DCC1AC72163EF3B0092C53A /* FoodContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodContainerViewController.swift; sourceTree = "<group>"; };
 		3FBB6987219753CC0080BFB8 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		BD74107721B9DD05001F5BF0 /* MAD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MAD.xcdatamodel; sourceTree = "<group>"; };
 		BDEA09E721979C4500D73AC8 /* CustomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarButton.swift; sourceTree = "<group>"; };
 		BDEA09EF2199C24B00D73AC8 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		BDEA09F12199C57D00D73AC8 /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				3D20AA5A216268F100D1DC63 /* Storyboard */,
 				3D20AA59216268E600D1DC63 /* Controllers */,
 				3D20AA25216264F900D1DC63 /* AppDelegate.swift */,
+				BD74107621B9DD05001F5BF0 /* MAD.xcdatamodeld */,
 				3D20AA2C216264F900D1DC63 /* Assets.xcassets */,
 				3D20AA31216264F900D1DC63 /* Info.plist */,
 				BDEA0A04219B7C8F00D73AC8 /* Localizable.strings */,
@@ -401,6 +404,7 @@
 				BDEA09F62199F58800D73AC8 /* FoodDetailTableController.swift in Sources */,
 				BDEA09F02199C24B00D73AC8 /* Int+Ext.swift in Sources */,
 				3DCC1AB92163B33D0092C53A /* UIButton+Ext.swift in Sources */,
+				BD74107821B9DD05001F5BF0 /* MAD.xcdatamodeld in Sources */,
 				3D7F50302162B9930074E9F0 /* UserSettings.swift in Sources */,
 				BDEA09F42199F4EB00D73AC8 /* FoodDetailController.swift in Sources */,
 				BDEA09F8219A4FA100D73AC8 /* UITextField+Ext.swift in Sources */,
@@ -711,6 +715,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD74107621B9DD05001F5BF0 /* MAD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD74107721B9DD05001F5BF0 /* MAD.xcdatamodel */,
+			);
+			currentVersion = BD74107721B9DD05001F5BF0 /* MAD.xcdatamodel */;
+			path = MAD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3D20AA1A216264F900D1DC63 /* Project object */;
 }
